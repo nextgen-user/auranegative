@@ -456,7 +456,6 @@ app.use(bodyParser.json({ limit: '50mb' }));
 // Initialize Google Gen AI
 // Expects GOOGLE_API_KEY in environment variables
 const ai = new GoogleGenAI({
-    vertexai: true,
     apiKey: "AQ.Ab8RN6IM4vswNdXQbWrjuek33SSmY4p9_tAiS0mn0X9ldy81LQ",
 });
 
