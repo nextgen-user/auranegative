@@ -456,6 +456,7 @@ app.use(bodyParser.json({ limit: '50mb' }));
 // Initialize Google Gen AI
 // Expects GOOGLE_API_KEY in environment variables
 const ai = new GoogleGenAI({
+    vertexai: true,
     apiKey: "AQ.Ab8RN6IM4vswNdXQbWrjuek33SSmY4p9_tAiS0mn0X9ldy81LQ",
 });
 
@@ -1607,11 +1608,7 @@ Look at the annotated image to see the grid and current element positions.`,
     // AI IMAGE GENERATION FUNCTION
     {
         name: "generate_and_apply_image",
-        description: `Generates an image using AI (Nano Banana/Gemini) based on a text prompt, removes the background using Cloudinary, saves it to canvas-images, and places it on the canvas. 
-If replaceExistingGridId is provided, the system will find the nearest image/MediaContainer element to that grid position, remove it, and place the new image at that exact grid position.
-Otherwise, places at the specified grid cell with given dimensions.
-The image will be upscaled 10X after background removal for best quality, then resized to fit within the specified dimensions.
-Use this to add or replace decorative elements, icons, illustrations, or product images to enhance the design.`,
+        description: `Generates an image using AI (Nano Banana/Gemini) based on a text prompt, removes the background using Cloudinary, saves it to canvas-images, and places it on the canvas at a specified grid cell with given dimensions. The image will be resized to fit within the specified dimensions while maintaining aspect ratio. Use this to add decorative elements, icons, illustrations, or product images to enhance the design.`,
         parameters: {
             type: "object",
             properties: {
@@ -1621,30 +1618,22 @@ Use this to add or replace decorative elements, icons, illustrations, or product
                 },
                 gridCell: {
                     type: "string",
-                    description: "Target grid cell for placement. Format: [Column A-T]-[Row 1-20] with optional sub-position. Examples: 'C-5' (center), 'J-10-TL' (top-left of cell). Not required if replaceExistingGridId is provided."
+                    description: "Target grid cell for placement. Format: [Column A-T]-[Row 1-20] with optional sub-position. Examples: 'C-5' (center), 'J-10-TL' (top-left of cell)"
                 },
                 width: {
                     type: "number",
-                    description: "Target width for the image in pixels (will maintain aspect ratio). Should be larger than expected for best quality."
+                    description: "Target width for the image in pixels (will maintain aspect ratio)"
                 },
                 height: {
                     type: "number",
-                    description: "Target height for the image in pixels (will maintain aspect ratio). Should be larger than expected for best quality."
+                    description: "Target height for the image in pixels (will maintain aspect ratio)"
                 },
                 removeBackground: {
                     type: "boolean",
                     description: "Whether to remove the background from the generated image using Cloudinary (default: true)"
-                },
-                replaceExistingGridId: {
-                    type: "string",
-                    description: "Grid cell ID (e.g., 'C-5', 'J-10') to find the nearest image/MediaContainer element to replace. The nearest image element to this grid position will be removed and the new image will be placed at this grid position. This is the PREFERRED method for replacing images."
-                },
-                minSizePercent: {
-                    type: "number",
-                    description: "Minimum size as percentage of original dimensions when replacing. MUST BE MORE THAN 80% (default: 80)"
                 }
             },
-            required: ["prompt"]
+            required: ["prompt", "gridCell", "width", "height"]
         }
     }
 ];
@@ -1684,114 +1673,20 @@ function executeLayoutFunction(canvasData, functionName, args) {
     };
 
     // SPECIAL CASE: Handle functions that don't require an existing element
-    // generate_and_apply_image creates a NEW element OR replaces an existing one
+    // generate_and_apply_image creates a NEW element, so it doesn't need to find an existing one
     if (functionName === "generate_and_apply_image") {
-        console.log("=== Processing generate_and_apply_image ===");
-
-        // Get canvas dimensions for grid calculations
-        const artboard = canvasData.pages?.[0]?.artboards?.[0];
-        const canvasWidth = artboard?.width || 2550;
-        const canvasHeight = artboard?.height || 3300;
-
-        // Check if we're replacing an existing element by grid position
-        if (args.replaceExistingGridId) {
-            console.log(`Replacement mode: finding nearest image element to grid ${args.replaceExistingGridId}`);
-
-            // Convert grid ID to pixel coordinates
-            const { x: gridX, y: gridY } = gridIdToPixels(args.replaceExistingGridId, canvasWidth, canvasHeight, "center");
-            console.log(`Grid ${args.replaceExistingGridId} -> pixels (${gridX}, ${gridY})`);
-
-            // Find all image/MediaContainer elements
-            const imageElements = [];
-            const findImageElements = (elements, parentTranslation = { x: 0, y: 0 }) => {
-                for (const el of elements) {
-                    if (el.type === 'MediaContainer' || el.type === 'ImageRectangle' ||
-                        el.name?.toLowerCase().includes('image') || el._newImage) {
-                        const elX = (el.translation?.x || 0) + parentTranslation.x;
-                        const elY = (el.translation?.y || 0) + parentTranslation.y;
-                        const elCenterX = elX + (el.boundsLocal?.width || el.width || 0) / 2;
-                        const elCenterY = elY + (el.boundsLocal?.height || el.height || 0) / 2;
-
-                        // Calculate distance from element center to grid position
-                        const distance = Math.sqrt(Math.pow(elCenterX - gridX, 2) + Math.pow(elCenterY - gridY, 2));
-
-                        imageElements.push({
-                            element: el,
-                            id: el.id,
-                            centerX: elCenterX,
-                            centerY: elCenterY,
-                            distance: distance
-                        });
-                    }
-                    if (el.children) {
-                        findImageElements(el.children, {
-                            x: (el.translation?.x || 0) + parentTranslation.x,
-                            y: (el.translation?.y || 0) + parentTranslation.y
-                        });
-                    }
-                }
-            };
-
-            if (canvasData.allElements) {
-                findImageElements(canvasData.allElements);
-            }
-
-            // Sort by distance and get the nearest one
-            imageElements.sort((a, b) => a.distance - b.distance);
-
-            if (imageElements.length > 0) {
-                const nearestImage = imageElements[0];
-                console.log(`Found nearest image element: ${nearestImage.id} at distance ${nearestImage.distance.toFixed(2)}px`);
-                console.log(`  Center: (${nearestImage.centerX.toFixed(0)}, ${nearestImage.centerY.toFixed(0)})`);
-
-                // Mark this element for deletion
-                const targetElement = nearestImage.element;
-
-                // Use the grid position for the new image, not the old element's position
-                const minPercent = args.minSizePercent || 80;
-                const origWidth = targetElement.boundsLocal?.width || targetElement.width || 300;
-                const origHeight = targetElement.boundsLocal?.height || targetElement.height || 300;
-                const minWidth = Math.round(origWidth * (minPercent / 100));
-                const minHeight = Math.round(origHeight * (minPercent / 100));
-
-                result.success = true;
-                result.isAsyncImageGeneration = true;
-                result.isReplacement = true;
-                result.replaceExistingGridId = args.replaceExistingGridId;
-                result.replacedElementId = nearestImage.id;
-                result.prompt = args.prompt;
-                // Use the GRID position for new placement
-                result.gridCell = args.replaceExistingGridId;
-                // Use provided dimensions or fallback to original (respecting min size)
-                result.width = args.width || Math.max(origWidth, minWidth);
-                result.height = args.height || Math.max(origHeight, minHeight);
-                result.minWidth = minWidth;
-                result.minHeight = minHeight;
-                result.removeBackground = args.removeBackground !== false;
-                result.message = `Queued image replacement at grid ${args.replaceExistingGridId} (replacing element ${nearestImage.id}): "${args.prompt.substring(0, 50)}..." (${result.width}x${result.height})`;
-                console.log("Result (grid replacement mode):", JSON.stringify(result, null, 2));
-                return result;
-            } else {
-                console.warn(`No image elements found near grid ${args.replaceExistingGridId}, falling back to new element mode at that grid position`);
-                // Fall through to new element mode but use the replacement grid as the target
-                args.gridCell = args.replaceExistingGridId;
-            }
-        }
-
-        // New element mode (original behavior)
+        console.log("=== Processing generate_and_apply_image (special case - no element lookup needed) ===");
         result.success = true;
         result.isAsyncImageGeneration = true;
-        result.isReplacement = false;
         result.prompt = args.prompt;
-        result.gridCell = args.gridCell || args.replaceExistingGridId || 'J-10';
-        result.width = args.width || 300;
-        result.height = args.height || 300;
+        result.gridCell = args.gridCell;
+        result.width = args.width;
+        result.height = args.height;
         result.removeBackground = args.removeBackground !== false; // Default to true
-        result.message = `Queued image generation: "${args.prompt.substring(0, 50)}..." at ${result.gridCell} (${result.width}x${result.height})`;
-        console.log("Result (new element mode):", JSON.stringify(result, null, 2));
+        result.message = `Queued image generation: "${args.prompt.substring(0, 50)}..." at ${args.gridCell} (${args.width}x${args.height})`;
+        console.log("Result:", JSON.stringify(result, null, 2));
         return result;
     }
-
 
     // Find element in both structures
     let element = canvasData.allElements ? findElement(canvasData.allElements, args.elementId) : null;
@@ -2059,18 +1954,7 @@ app.post('/enhancelayout', async (req, res) => {
     try {
         console.log("Received enhance layout request");
 
-        const { pageRendition, improvementFocus, customPrompt, iterationInfo } = req.body;
-
-        // Log iteration info if present
-        if (iterationInfo) {
-            console.log(`Iteration ${iterationInfo.currentIteration}/${iterationInfo.totalIterations}`);
-            if (iterationInfo.previousSummary) {
-                console.log(`Previous summary: ${iterationInfo.previousSummary.substring(0, 100)}...`);
-            }
-            if (iterationInfo.planForThisIteration) {
-                console.log(`Plan for this iteration: ${iterationInfo.planForThisIteration}`);
-            }
-        }
+        const { pageRendition, improvementFocus, customPrompt } = req.body;
 
         // Check if canvas-data.json exists
         try {
@@ -2093,81 +1977,9 @@ app.post('/enhancelayout', async (req, res) => {
         const cellWidth = Math.round(canvasWidth / GRID_COLS);
         const cellHeight = Math.round(canvasHeight / GRID_ROWS);
 
-        // Build iteration context for multi-iteration mode
-        let iterationContext = '';
-        if (iterationInfo && iterationInfo.totalIterations > 1) {
-            const { currentIteration, totalIterations, previousSummary, planForThisIteration } = iterationInfo;
-
-            iterationContext = `
-=== MULTI-ITERATION MODE ===
-This is iteration ${currentIteration} of ${totalIterations}.
-`;
-
-            // Define iteration-specific focuses if no plan provided
-            const defaultIterationFocus = {
-                1: "Focus on GENERATING NEW IMAGES: Use generate_and_apply_image to add decorative elements, product images, or icons that enhance the design. Position them in empty or sparse areas of the canvas.",
-                2: "Focus on MOVING IMAGE ELEMENTS: Reposition MediaContainer and image elements to better grid positions. Ensure images don't overlap with text or other images. Replace existing images with better ones using replaceExistingId parameter.",
-                3: "Focus on MOVING TEXT ELEMENTS: Adjust Text element positions for better readability and visual hierarchy. Ensure text doesn't overlap with images or other text.",
-                4: "Focus on FINAL POLISH: Check for any remaining overlaps, adjust spacing, ensure visual balance. Make minor adjustments to colors, opacity, or sizes if needed."
-            };
-
-            // Get iteration focus - use provided plan or default based on iteration number
-            const focusForIteration = planForThisIteration ||
-                defaultIterationFocus[Math.min(currentIteration, 4)] ||
-                "General layout refinement and polish";
-
-            iterationContext += `
-ITERATION FOCUS: ${focusForIteration}
-`;
-
-            if (previousSummary && currentIteration > 1) {
-                iterationContext += `
-PREVIOUS ITERATIONS SUMMARY:
-${previousSummary}
-
-Based on the above, continue improving the layout. Do NOT repeat changes that were already made in previous iterations.
-`;
-            }
-
-            // Iteration-specific instructions
-            if (currentIteration === 1) {
-                iterationContext += `
-FIRST ITERATION INSTRUCTIONS:
-- Prioritize generating new images using generate_and_apply_image
-- When replacing existing images, use the replaceExistingId parameter to replace in-place
-- Set minSizePercent to at least 70 to maintain reasonable image sizes
-- Look at existing MediaContainer elements and consider regenerating/improving them
-`;
-            } else if (currentIteration === 2) {
-                iterationContext += `
-SECOND ITERATION INSTRUCTIONS:
-- Focus on repositioning image and media elements
-- Use move_element_to_grid to adjust MediaContainer positions
-- If an image needs to be replaced, use generate_and_apply_image with replaceExistingId
-- Ensure images are well-distributed across the canvas
-`;
-            } else if (currentIteration === 3) {
-                iterationContext += `
-THIRD ITERATION INSTRUCTIONS:
-- Focus on Text element positioning
-- Ensure text is readable and not overlapping with images
-- Adjust text positions, sizes, or colors if needed
-- Create visual hierarchy with heading and body text
-`;
-            } else {
-                iterationContext += `
-FINAL ITERATION INSTRUCTIONS:
-- Review the entire layout for any remaining issues
-- Make only minimal, necessary adjustments
-- Ensure the design is cohesive and professional
-- Check for overlaps, spacing issues, and visual balance
-`;
-            }
-        }
-
         // Build the enhanced prompt with grid system explanation
         const layoutAnalysisPrompt = `You are an expert UI/UX designer and layout specialist. Analyze the provided canvas design using the ANNOTATED IMAGE and JSON data to suggest and implement layout improvements.
-${iterationContext}
+
 === GRID SYSTEM EXPLANATION ===
 The canvas has a ${GRID_COLS}x${GRID_ROWS} GRID OVERLAY visible in the annotated image:
 - Canvas size: ${canvasWidth}px wide × ${canvasHeight}px tall
@@ -2192,12 +2004,6 @@ The annotated image shows:
    - Text elements should not overlap with images or other text
    - Important content should be in prominent grid areas (top rows, center)
 
-=== IMAGE REPLACEMENT ===
-To replace an existing image, use generate_and_apply_image with:
-- replaceExistingId: the ID of the MediaContainer/image to replace
-- minSizePercent: minimum size as % of original (default 70, so 100x100 becomes at least 70x70)
-- The new image will be placed at the same position as the original
-
 === CANVAS DATA JSON ===
 ${JSON.stringify(canvasData, null, 2)}
 
@@ -2212,11 +2018,9 @@ ${customPrompt ? `\n=== USER CUSTOM INSTRUCTIONS ===\n${customPrompt}` : ''}
 - Very very important:
 - When you move an element to a grid cell, the element's CENTER will be placed at that grid position. This matches how element positions are displayed.
 - Since we will be using these adjustments in Adobe Express, it is not necessary to center all elements. Ensure elements are not overlapping with images. The overall canvas view should look beautiful after editing.
-- Move only those elements , which appear out of place , and we have to absouletely move them.
-- replacement is allowed but do not delete an element unless absouletely necessary.
 `;
         // ${JSON.stringify(canvasData, null, 2)}
-        // - Move only those elements , which appear out of place , and we have to absouletely move them.
+        //- Move only those elements , which appear out of place , and we have to absouletely move them.
 
         // Prepare contents for Gemini
         const contents = [{ text: layoutAnalysisPrompt }];
@@ -2280,7 +2084,7 @@ ${customPrompt ? `\n=== USER CUSTOM INSTRUCTIONS ===\n${customPrompt}` : ''}
 
         // Call Gemini with function declarations + thinking enabled + streaming
         const stream = await ai.models.generateContentStream({
-            model: "gemini-3-flash-preview",
+            model: "gemini-3-pro-preview",
             contents: contents,
             config: {
                 tools: [{
@@ -2348,29 +2152,11 @@ ${customPrompt ? `\n=== USER CUSTOM INSTRUCTIONS ===\n${customPrompt}` : ''}
         const generatedImages = [];
 
         for (const task of imageGenerationTasks) {
-            const {
-                prompt, gridCell, width, height, removeBackground,
-                isReplacement, replaceExistingGridId, replacedElementId,
-                minWidth, minHeight
-            } = task.result;
-
+            const { prompt, gridCell, width, height, removeBackground } = task.result;
             console.log(`\n--- Processing image generation task ---`);
             console.log(`Prompt: "${prompt}"`);
-            console.log(`Mode: ${isReplacement ? 'REPLACEMENT' : 'NEW'}`);
-            if (isReplacement) {
-                console.log(`Replacing at grid: ${replaceExistingGridId}`);
-                console.log(`Element to delete: ${replacedElementId}`);
-                console.log(`Min dimensions: ${minWidth}x${minHeight}`);
-            } else {
-                console.log(`Grid: ${gridCell}, Size: ${width}x${height}, RemoveBg: ${removeBackground}`);
-            }
-            sendEvent('imageGeneration', {
-                status: 'starting',
-                prompt: prompt.substring(0, 50) + '...',
-                isReplacement,
-                replaceExistingGridId,
-                replacedElementId
-            });
+            console.log(`Grid: ${gridCell}, Size: ${width}x${height}, RemoveBg: ${removeBackground}`);
+            sendEvent('imageGeneration', { status: 'starting', prompt: prompt.substring(0, 50) + '...' });
 
             try {
                 // Step 1: Generate image using Nano Banana (Gemini)
@@ -2510,51 +2296,18 @@ Output ONLY the image, no text.`;
                     }
                 }
 
-                // Step 3: UPSCALE 10X for best quality before final resize
-                console.log("Upscaling image 10X for best quality...");
-                const upscaleMetadata = await sharp(finalImageBuffer).metadata();
-                const upscaleWidth = Math.round((upscaleMetadata.width || 512) * 10);
-                const upscaleHeight = Math.round((upscaleMetadata.height || 512) * 10);
-
-                // Limit upscale to reasonable max to avoid memory issues
-                const maxUpscale = 5000;
-                const upscaledBuffer = await sharp(finalImageBuffer)
-                    .resize(Math.min(upscaleWidth, maxUpscale), Math.min(upscaleHeight, maxUpscale), {
+                // Step 3: Resize image while maintaining aspect ratio
+                console.log(`Resizing image to fit ${width}x${height}...`);
+                const resizedBuffer = await sharp(finalImageBuffer)
+                    .resize(width, height, {
                         fit: 'inside',
-                        kernel: 'lanczos3' // High quality upscaling
-                    })
-                    .png()
-                    .toBuffer();
-
-                const upscaledMeta = await sharp(upscaledBuffer).metadata();
-                console.log(`Upscaled from ${upscaleMetadata.width}x${upscaleMetadata.height} to ${upscaledMeta.width}x${upscaledMeta.height}`);
-
-                // Step 4: Final resize to target dimensions
-                // For replacement mode, ensure minimum size is respected
-                let targetWidth = width || 300;
-                let targetHeight = height || 300;
-                if (isReplacement && minWidth && minHeight) {
-                    targetWidth = Math.max(width || minWidth, minWidth);
-                    targetHeight = Math.max(height || minHeight, minHeight);
-                }
-
-                // Sharp requires positive integers for dimensions
-                targetWidth = Math.round(targetWidth);
-                targetHeight = Math.round(targetHeight);
-                if (targetWidth <= 0) targetWidth = 300;
-                if (targetHeight <= 0) targetHeight = 300;
-
-                console.log(`Final resize to fit ${targetWidth}x${targetHeight}...`);
-                const resizedBuffer = await sharp(upscaledBuffer)
-                    .resize(targetWidth, targetHeight, {
-                        fit: 'inside',
-                        withoutEnlargement: true // Don't enlarge beyond target
+                        withoutEnlargement: false
                     })
                     .png()
                     .toBuffer();
 
                 const resizedMetadata = await sharp(resizedBuffer).metadata();
-                console.log(`Final size: ${resizedMetadata.width}x${resizedMetadata.height}`);
+                console.log(`Resized to ${resizedMetadata.width}x${resizedMetadata.height}`);
 
                 // Step 4: Save to canvas-images directory
                 await ensureImagesDir();
@@ -2565,63 +2318,23 @@ Output ONLY the image, no text.`;
                 await fs.writeFile(imagePath, resizedBuffer);
                 console.log("Generated image saved to:", imagePath);
 
-                // Step 5: Calculate position - use gridCell for placement
+                // Step 5: Calculate grid position
                 const artboard = canvasData.pages?.[0]?.artboards?.[0];
                 const canvasWidthPx = artboard?.width || 1500;
                 const canvasHeightPx = artboard?.height || 2100;
 
-                let imageX, imageY;
-                let finalElementId;
-
-                // Use grid position for both new and replacement modes
-                const targetGrid = gridCell || 'J-10';
-                const { x: targetX, y: targetY } = gridIdToPixels(targetGrid, canvasWidthPx, canvasHeightPx, "center");
+                const { x: targetX, y: targetY } = gridIdToPixels(gridCell, canvasWidthPx, canvasHeightPx, "center");
 
                 // Calculate translation to center the image at target position
-                imageX = Math.round(targetX - resizedMetadata.width / 2);
-                imageY = Math.round(targetY - resizedMetadata.height / 2);
+                const imageX = Math.round(targetX - resizedMetadata.width / 2);
+                const imageY = Math.round(targetY - resizedMetadata.height / 2);
 
-                const timestampStrForId = Date.now();
-
-                if (isReplacement && replacedElementId) {
-                    // REPLACEMENT MODE: Mark old element for deletion and create new one
-                    finalElementId = `replaced-${replacedElementId.substring(0, 8)}-${timestampStrForId}`;
-
-                    console.log(`Replacing element ${replacedElementId} with new image at grid ${targetGrid} -> (${imageX}, ${imageY})`);
-
-                    // Find and mark old element for deletion
-                    const findAndMarkForDeletion = (elements) => {
-                        for (const el of elements) {
-                            if (el.id === replacedElementId) {
-                                el._deleted = true;
-                                el._replacedBy = finalElementId;
-                                return true;
-                            }
-                            if (el.children && findAndMarkForDeletion(el.children)) {
-                                return true;
-                            }
-                        }
-                        return false;
-                    };
-
-                    if (canvasData.allElements) {
-                        findAndMarkForDeletion(canvasData.allElements);
-                    }
-
-                    sendEvent('imageGeneration', {
-                        status: 'replacing',
-                        oldElementId: replacedElementId,
-                        newElementId: finalElementId
-                    });
-                } else {
-                    // NEW MODE
-                    finalElementId = `generated-${timestampStrForId}`;
-                    console.log(`Placing new image at grid ${targetGrid} -> translation (${imageX}, ${imageY})`);
-                }
+                console.log(`Placing image at grid ${gridCell} -> translation (${imageX}, ${imageY})`);
 
                 // Step 6: Create new element in canvas data for the generated image
+                const newElementId = `generated-${timestampStr}`;
                 const newElement = {
-                    id: finalElementId,
+                    id: newElementId,
                     type: "MediaContainer",
                     name: `AI Generated: ${prompt.substring(0, 30)}`,
                     translation: { x: imageX, y: imageY },
@@ -2643,9 +2356,7 @@ Output ONLY the image, no text.`;
                     _newImage: true,
                     _imageBase64: `data:image/png;base64,${resizedBuffer.toString('base64')}`,
                     _imagePath: imagePath,
-                    _prompt: prompt,
-                    _isReplacement: isReplacement,
-                    _replacedElementId: replacedElementId || null
+                    _prompt: prompt
                 };
 
                 // Add to allElements
@@ -2657,11 +2368,9 @@ Output ONLY the image, no text.`;
                 }
 
                 generatedImages.push({
-                    elementId: finalElementId,
+                    elementId: newElementId,
                     prompt,
-                    gridCell: isReplacement ? null : gridCell,
-                    isReplacement,
-                    replacedElementId: replaceExistingId || null,
+                    gridCell,
                     imagePath: imageFileName,
                     imageBase64: `data:image/png;base64,${resizedBuffer.toString('base64')}`,
                     dimensions: { width: resizedMetadata.width, height: resizedMetadata.height },
@@ -2670,10 +2379,8 @@ Output ONLY the image, no text.`;
 
                 sendEvent('imageGeneration', {
                     status: 'complete',
-                    elementId: finalElementId,
-                    gridCell: isReplacement ? null : gridCell,
-                    isReplacement,
-                    replacedElementId: replaceExistingId || null,
+                    elementId: newElementId,
+                    gridCell,
                     dimensions: { width: resizedMetadata.width, height: resizedMetadata.height }
                 });
 

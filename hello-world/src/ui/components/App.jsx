@@ -906,17 +906,6 @@ const App = ({ addOnUISdk, sandboxProxy }) => {
         setSyncMessage(`Starting layout enhancement (${iterations} iteration${iterations > 1 ? 's' : ''})...`);
         addLiveStatus('info', `Starting layout enhancement with ${iterations} iteration${iterations > 1 ? 's' : ''}`);
 
-        // Track summaries of what was done in each iteration for context
-        const iterationSummaries = [];
-
-        // Define default iteration focuses for multi-iteration mode
-        const defaultIterationFocus = {
-            1: "Generate new images and decorative elements",
-            2: "Move and reposition image elements",
-            3: "Move and adjust text elements",
-            4: "Final polish and refinement"
-        };
-
         let totalChanges = 0;
 
         try {
@@ -924,13 +913,6 @@ const App = ({ addOnUISdk, sandboxProxy }) => {
                 const iterPrefix = iterations > 1 ? `[${iter}/${iterations}] ` : '';
                 const progressBase = ((iter - 1) / iterations) * 100;
                 const progressPerIter = 100 / iterations;
-
-                // Get focus for this iteration
-                const iterationFocus = defaultIterationFocus[Math.min(iter, 4)] || "General layout improvement";
-
-                if (iterations > 1) {
-                    addLiveStatus('info', `Iteration ${iter}: ${iterationFocus}`);
-                }
 
                 // Step 1: Save snapshot for undo (before making changes)
                 setSyncMessage(`${iterPrefix}Saving undo snapshot...`);
@@ -974,8 +956,6 @@ const App = ({ addOnUISdk, sandboxProxy }) => {
                 setProgress(progressBase + progressPerIter * 0.5);
 
                 let changesCount = 0;
-                let iterationAppliedChanges = []; // Track changes for this iteration's summary
-
                 try {
                     const response = await fetch("http://localhost:3000/enhancelayout", {
                         method: "POST",
@@ -987,16 +967,7 @@ const App = ({ addOnUISdk, sandboxProxy }) => {
                             region: regionOverride,
                             audience: audienceOverride,
                             layoutStyle: layoutStyleOverride,
-                            toneStyle: toneStyleOverride,
-                            // Iteration info for multi-iteration mode
-                            iterationInfo: iterations > 1 ? {
-                                currentIteration: iter,
-                                totalIterations: iterations,
-                                previousSummary: iterationSummaries.length > 0
-                                    ? iterationSummaries.join(" | ")
-                                    : null,
-                                planForThisIteration: iterationFocus
-                            } : null
+                            toneStyle: toneStyleOverride
                         }),
                     });
 
@@ -1085,23 +1056,11 @@ const App = ({ addOnUISdk, sandboxProxy }) => {
                                     // Track applied changes for final count
                                     if (data.appliedChanges) {
                                         changesCount = data.appliedChanges.length;
-                                        // Store changes for iteration summary
-                                        iterationAppliedChanges = data.appliedChanges;
                                     }
                                     // Track generated images count
                                     if (data.generatedImages) {
                                         console.log(`Generated ${data.generatedImages.length} images`);
                                         addLiveStatus('info', `Generated ${data.generatedImages.length} images`);
-                                        // Add image generation to applied changes for summary
-                                        data.generatedImages.forEach(img => {
-                                            iterationAppliedChanges.push({
-                                                function: 'generate_and_apply_image',
-                                                result: {
-                                                    message: `Generated image: ${img.prompt?.substring(0, 30)}...`,
-                                                    isReplacement: img.isReplacement
-                                                }
-                                            });
-                                        });
                                     }
 
                                     // Reset event type after processing
@@ -1127,26 +1086,6 @@ const App = ({ addOnUISdk, sandboxProxy }) => {
                 setSyncMessage(`${iterPrefix}Applying ${changesCount} layout changes...`);
                 await handleLoadFromBackend();
                 setProgress(progressBase + progressPerIter);
-
-                // Build summary for this iteration to pass to subsequent iterations
-                if (iterations > 1 && iterationAppliedChanges.length > 0) {
-                    const summaryParts = [];
-
-                    // Count changes by type
-                    const moveCount = iterationAppliedChanges.filter(c => c.function?.includes('move_element')).length;
-                    const imageCount = iterationAppliedChanges.filter(c => c.function === 'generate_and_apply_image').length;
-                    const deleteCount = iterationAppliedChanges.filter(c => c.function === 'delete_element').length;
-                    const textCount = iterationAppliedChanges.filter(c => c.function?.includes('text')).length;
-
-                    if (moveCount > 0) summaryParts.push(`Moved ${moveCount} elements`);
-                    if (imageCount > 0) summaryParts.push(`Generated/replaced ${imageCount} images`);
-                    if (deleteCount > 0) summaryParts.push(`Deleted ${deleteCount} elements`);
-                    if (textCount > 0) summaryParts.push(`Modified ${textCount} text elements`);
-
-                    const iterSummary = `Iteration ${iter}: ${summaryParts.join(', ') || `Applied ${changesCount} changes`}`;
-                    iterationSummaries.push(iterSummary);
-                    console.log(`[handleEnhanceLayout] ${iterSummary}`);
-                }
 
                 // Small delay between iterations
                 if (iter < iterations) {
