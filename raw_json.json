@@ -1,0 +1,867 @@
+{
+    "documentRoot": {
+        "id": "#artwork",
+        "type": "ArtworkRoot"
+    },
+    "pages": [
+        {
+            "id": "d57e1e1d-e859-4519-b578-5f3b9646c42f",
+            "type": "Page",
+            "name": "Blue Yellow Examination Flyer",
+            "width": 2550,
+            "height": 3300,
+            "parentId": "#artwork",
+            "hasChildren": false,
+            "pageIndex": 0,
+            "artboards": [
+                {
+                    "id": "dd037873-ee23-4abe-b8ef-a84ee78be397",
+                    "type": "ab:Artboard",
+                    "name": null,
+                    "boundsLocal": {
+                        "x": 0,
+                        "y": 0,
+                        "width": 2550,
+                        "height": 3300
+                    },
+                    "centerPointLocal": {
+                        "x": 1275,
+                        "y": 1650
+                    },
+                    "topLeftLocal": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "width": 2550,
+                    "height": 3300,
+                    "fill": {
+                        "type": "Color",
+                        "color": {
+                            "red": 1,
+                            "green": 1,
+                            "blue": 1,
+                            "alpha": 1
+                        }
+                    },
+                    "parentId": "d57e1e1d-e859-4519-b578-5f3b9646c42f",
+                    "hasChildren": true,
+                    "childCount": 8,
+                    "depth": 1,
+                    "path": "Page[0] > Artboard[0]",
+                    "index": 1,
+                    "children": [
+                        {
+                            "id": "b6aafe85-9a5f-4a63-ad33-e22e60accdd3",
+                            "type": "Text",
+                            "name": null,
+                            "translation": {
+                                "x": 114.6708984375,
+                                "y": 376.24224853515625
+                            },
+                            "rotation": 0,
+                            "rotationInScreen": 0,
+                            "transformMatrix": {
+                                "0": 0.9999999403953552,
+                                "1": 0,
+                                "2": 0,
+                                "3": 0.9999999403953552,
+                                "4": 114.6708984375,
+                                "5": 376.24224853515625
+                            },
+                            "boundsLocal": {
+                                "x": 0,
+                                "y": 0,
+                                "width": 1600.4552205403647,
+                                "height": 869.2615509033204
+                            },
+                            "centerPointLocal": {
+                                "x": 800.2276102701824,
+                                "y": 434.6307754516602
+                            },
+                            "topLeftLocal": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "opacity": 1,
+                            "blendMode": 2,
+                            "locked": false,
+                            "textContent": {
+                                "plainText": ""
+                            },
+                            "textAlignment": 1,
+                            "parentId": "dd037873-ee23-4abe-b8ef-a84ee78be397",
+                            "hasChildren": false,
+                            "depth": 2,
+                            "path": "Page[0] > Artboard[0] > Text[0]",
+                            "index": 2,
+                            "children": []
+                        },
+                        {
+                            "id": "040e434b-e0bf-44d4-ac02-523700b65f46",
+                            "type": "Text",
+                            "name": null,
+                            "translation": {
+                                "x": 108.49853515625,
+                                "y": 241.4546356201172
+                            },
+                            "rotation": 0,
+                            "rotationInScreen": 0,
+                            "transformMatrix": {
+                                "0": 0.9999999403953552,
+                                "1": 0,
+                                "2": 0,
+                                "3": 0.9999999403953552,
+                                "4": 108.49853515625,
+                                "5": 241.4546356201172
+                            },
+                            "boundsLocal": {
+                                "x": 0,
+                                "y": 0,
+                                "width": 838.314437866211,
+                                "height": 72.12669849395752
+                            },
+                            "centerPointLocal": {
+                                "x": 419.1572189331055,
+                                "y": 36.06334924697876
+                            },
+                            "topLeftLocal": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "opacity": 1,
+                            "blendMode": 2,
+                            "locked": false,
+                            "textContent": {
+                                "plainText": ""
+                            },
+                            "textAlignment": 3,
+                            "parentId": "dd037873-ee23-4abe-b8ef-a84ee78be397",
+                            "hasChildren": false,
+                            "depth": 2,
+                            "path": "Page[0] > Artboard[0] > Text[1]",
+                            "index": 3,
+                            "children": []
+                        },
+                        {
+                            "id": "a19f2be8-e9c9-4f7d-b397-e7ea37b0e86a",
+                            "type": "Text",
+                            "name": null,
+                            "translation": {
+                                "x": 115.515380859375,
+                                "y": 1487.4698486328125
+                            },
+                            "rotation": 0,
+                            "rotationInScreen": 0,
+                            "transformMatrix": {
+                                "0": 0.9999999403953552,
+                                "1": 0,
+                                "2": 0,
+                                "3": 0.9999999403953552,
+                                "4": 115.515380859375,
+                                "5": 1487.4698486328125
+                            },
+                            "boundsLocal": {
+                                "x": 0,
+                                "y": 0,
+                                "width": 971.7348734537761,
+                                "height": 396.39918009440106
+                            },
+                            "centerPointLocal": {
+                                "x": 485.86743672688806,
+                                "y": 198.19959004720053
+                            },
+                            "topLeftLocal": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "opacity": 1,
+                            "blendMode": 2,
+                            "locked": false,
+                            "textContent": {
+                                "plainText": ""
+                            },
+                            "textAlignment": 1,
+                            "parentId": "dd037873-ee23-4abe-b8ef-a84ee78be397",
+                            "hasChildren": false,
+                            "depth": 2,
+                            "path": "Page[0] > Artboard[0] > Text[2]",
+                            "index": 4,
+                            "children": []
+                        },
+                        {
+                            "id": "b4436108-5394-4c80-8392-c2b4c7a8644f",
+                            "type": "Text",
+                            "name": null,
+                            "translation": {
+                                "x": 920.01171875,
+                                "y": 2827.0514311790466
+                            },
+                            "rotation": 0,
+                            "rotationInScreen": 0,
+                            "transformMatrix": {
+                                "0": 0.9999999403953552,
+                                "1": 0,
+                                "2": 0,
+                                "3": 0.9999999403953552,
+                                "4": 920.01171875,
+                                "5": 2827.051513671875
+                            },
+                            "boundsLocal": {
+                                "x": 0,
+                                "y": -57.629692554473884,
+                                "width": 712.989362080892,
+                                "height": 185.16163428624472
+                            },
+                            "centerPointLocal": {
+                                "x": 356.494681040446,
+                                "y": 34.951124588648476
+                            },
+                            "topLeftLocal": {
+                                "x": 0,
+                                "y": -57.629692554473884
+                            },
+                            "opacity": 1,
+                            "blendMode": 2,
+                            "locked": false,
+                            "textContent": {
+                                "plainText": ""
+                            },
+                            "textAlignment": 1,
+                            "parentId": "dd037873-ee23-4abe-b8ef-a84ee78be397",
+                            "hasChildren": false,
+                            "depth": 2,
+                            "path": "Page[0] > Artboard[0] > Text[3]",
+                            "index": 5,
+                            "children": []
+                        },
+                        {
+                            "id": "d06c8049-ff16-4a63-8243-f363ea8c99db",
+                            "type": "SolidColorShape",
+                            "name": null,
+                            "translation": {
+                                "x": 788.67626953125,
+                                "y": 2765.3151030540466
+                            },
+                            "rotation": 0,
+                            "rotationInScreen": 0,
+                            "transformMatrix": {
+                                "0": 1,
+                                "1": 0,
+                                "2": 0,
+                                "3": 1,
+                                "4": 788.67626953125,
+                                "5": 2765.315185546875
+                            },
+                            "boundsLocal": {
+                                "x": 7.026795864105225,
+                                "y": 6.991663455963135,
+                                "width": 70.0751633644104,
+                                "height": 70.08642339706421
+                            },
+                            "centerPointLocal": {
+                                "x": 42.064377546310425,
+                                "y": 42.03487515449524
+                            },
+                            "topLeftLocal": {
+                                "x": 7.026795864105225,
+                                "y": 6.991663455963135
+                            },
+                            "opacity": 1,
+                            "blendMode": 2,
+                            "locked": false,
+                            "parentId": "dd037873-ee23-4abe-b8ef-a84ee78be397",
+                            "hasChildren": false,
+                            "depth": 2,
+                            "path": "Page[0] > Artboard[0] > SolidColorShape[4]",
+                            "index": 6,
+                            "children": []
+                        },
+                        {
+                            "id": "a6b8e6f7-bbf6-4a49-a034-b643c4fe1455",
+                            "type": "SolidColorShape",
+                            "name": null,
+                            "translation": {
+                                "x": 803.77001953125,
+                                "y": 2876.5846343040466
+                            },
+                            "rotation": 0,
+                            "rotationInScreen": 0,
+                            "transformMatrix": {
+                                "0": 1,
+                                "1": 0,
+                                "2": 0,
+                                "3": 1,
+                                "4": 803.77001953125,
+                                "5": 2876.584716796875
+                            },
+                            "boundsLocal": {
+                                "x": 5.517789363861084,
+                                "y": 5.453022480010986,
+                                "width": 76.1853814125061,
+                                "height": 76.22255277633667
+                            },
+                            "centerPointLocal": {
+                                "x": 43.610480070114136,
+                                "y": 43.56429886817932
+                            },
+                            "topLeftLocal": {
+                                "x": 5.517789363861084,
+                                "y": 5.453022480010986
+                            },
+                            "opacity": 1,
+                            "blendMode": 2,
+                            "locked": false,
+                            "parentId": "dd037873-ee23-4abe-b8ef-a84ee78be397",
+                            "hasChildren": false,
+                            "depth": 2,
+                            "path": "Page[0] > Artboard[0] > SolidColorShape[5]",
+                            "index": 7,
+                            "children": []
+                        },
+                        {
+                            "id": "e4de1cd0-3b01-4f14-8577-f8e4e0ea22ee",
+                            "type": "Rectangle",
+                            "name": null,
+                            "translation": {
+                                "x": 109.72456359863281,
+                                "y": 1910.3673095703125
+                            },
+                            "rotation": 0,
+                            "rotationInScreen": 0,
+                            "transformMatrix": {
+                                "0": 1,
+                                "1": 0,
+                                "2": 0,
+                                "3": 1,
+                                "4": 109.72456359863281,
+                                "5": 1910.3673095703125
+                            },
+                            "boundsLocal": {
+                                "x": -1.2261601194523335,
+                                "y": -1.2261601194523335,
+                                "width": 654.6376848768151,
+                                "height": 165.96728666951438
+                            },
+                            "centerPointLocal": {
+                                "x": 326.0926823189552,
+                                "y": 81.75748321530486
+                            },
+                            "topLeftLocal": {
+                                "x": -1.2261601194523335,
+                                "y": -1.2261601194523335
+                            },
+                            "width": 652.1853646379104,
+                            "height": 163.51496643060972,
+                            "opacity": 1,
+                            "blendMode": 2,
+                            "locked": false,
+                            "fill": {
+                                "type": "Color",
+                                "color": {
+                                    "red": 1,
+                                    "green": 0.9686274509803922,
+                                    "blue": 0.21176470588235294,
+                                    "alpha": 1
+                                }
+                            },
+                            "stroke": {
+                                "color": {
+                                    "red": 1,
+                                    "green": 0.9686274509803922,
+                                    "blue": 0.21176470588235294,
+                                    "alpha": 1
+                                },
+                                "width": 2.452320238904667,
+                                "position": 0,
+                                "dashPattern": [],
+                                "dashOffset": 0
+                            },
+                            "parentId": "dd037873-ee23-4abe-b8ef-a84ee78be397",
+                            "hasChildren": false,
+                            "depth": 2,
+                            "path": "Page[0] > Artboard[0] > Rectangle[6]",
+                            "index": 8,
+                            "children": []
+                        },
+                        {
+                            "id": "2799ddd6-9dd1-411b-bcb3-5e47076ca925",
+                            "type": "Text",
+                            "name": null,
+                            "translation": {
+                                "x": 435.8172912597656,
+                                "y": 2016.4796142578125
+                            },
+                            "rotation": 0,
+                            "rotationInScreen": 0,
+                            "transformMatrix": {
+                                "0": 0.9999999403953552,
+                                "1": 0,
+                                "2": 0,
+                                "3": 0.9999999403953552,
+                                "4": 435.8172912597656,
+                                "5": 2016.4796142578125
+                            },
+                            "boundsLocal": {
+                                "x": -252.33151117960614,
+                                "y": -57.35501845677694,
+                                "width": 504.6630223592123,
+                                "height": 74.29124911626181
+                            },
+                            "centerPointLocal": {
+                                "x": 0,
+                                "y": -20.209393898646034
+                            },
+                            "topLeftLocal": {
+                                "x": -252.33151117960614,
+                                "y": -57.35501845677694
+                            },
+                            "opacity": 1,
+                            "blendMode": 2,
+                            "locked": false,
+                            "textContent": {
+                                "plainText": ""
+                            },
+                            "textAlignment": 3,
+                            "parentId": "dd037873-ee23-4abe-b8ef-a84ee78be397",
+                            "hasChildren": false,
+                            "depth": 2,
+                            "path": "Page[0] > Artboard[0] > Text[7]",
+                            "index": 9,
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "totalNodes": 10,
+    "nodeTypes": {
+        "Page": 1,
+        "ab:Artboard": 1,
+        "Text": 5,
+        "SolidColorShape": 2,
+        "Rectangle": 1
+    },
+    "allElements": [
+        {
+            "id": "d57e1e1d-e859-4519-b578-5f3b9646c42f",
+            "type": "Page",
+            "name": "Blue Yellow Examination Flyer",
+            "width": 2550,
+            "height": 3300,
+            "parentId": "#artwork",
+            "hasChildren": false,
+            "pageIndex": 0,
+            "depth": 0,
+            "index": 0,
+            "path": "Page[0]"
+        },
+        {
+            "id": "dd037873-ee23-4abe-b8ef-a84ee78be397",
+            "type": "ab:Artboard",
+            "name": null,
+            "boundsLocal": {
+                "x": 0,
+                "y": 0,
+                "width": 2550,
+                "height": 3300
+            },
+            "centerPointLocal": {
+                "x": 1275,
+                "y": 1650
+            },
+            "topLeftLocal": {
+                "x": 0,
+                "y": 0
+            },
+            "width": 2550,
+            "height": 3300,
+            "fill": {
+                "type": "Color",
+                "color": {
+                    "red": 1,
+                    "green": 1,
+                    "blue": 1,
+                    "alpha": 1
+                }
+            },
+            "parentId": "d57e1e1d-e859-4519-b578-5f3b9646c42f",
+            "hasChildren": true,
+            "childCount": 8,
+            "depth": 1,
+            "path": "Page[0] > Artboard[0]",
+            "index": 1
+        },
+        {
+            "id": "b6aafe85-9a5f-4a63-ad33-e22e60accdd3",
+            "type": "Text",
+            "name": null,
+            "translation": {
+                "x": 114.6708984375,
+                "y": 376.24224853515625
+            },
+            "rotation": 0,
+            "rotationInScreen": 0,
+            "transformMatrix": {
+                "0": 0.9999999403953552,
+                "1": 0,
+                "2": 0,
+                "3": 0.9999999403953552,
+                "4": 114.6708984375,
+                "5": 376.24224853515625
+            },
+            "boundsLocal": {
+                "x": 0,
+                "y": 0,
+                "width": 1600.4552205403647,
+                "height": 869.2615509033204
+            },
+            "centerPointLocal": {
+                "x": 800.2276102701824,
+                "y": 434.6307754516602
+            },
+            "topLeftLocal": {
+                "x": 0,
+                "y": 0
+            },
+            "opacity": 1,
+            "blendMode": 2,
+            "locked": false,
+            "textContent": {
+                "plainText": ""
+            },
+            "textAlignment": 1,
+            "parentId": "dd037873-ee23-4abe-b8ef-a84ee78be397",
+            "hasChildren": false,
+            "depth": 2,
+            "path": "Page[0] > Artboard[0] > Text[0]",
+            "index": 2
+        },
+        {
+            "id": "040e434b-e0bf-44d4-ac02-523700b65f46",
+            "type": "Text",
+            "name": null,
+            "translation": {
+                "x": 108.49853515625,
+                "y": 241.4546356201172
+            },
+            "rotation": 0,
+            "rotationInScreen": 0,
+            "transformMatrix": {
+                "0": 0.9999999403953552,
+                "1": 0,
+                "2": 0,
+                "3": 0.9999999403953552,
+                "4": 108.49853515625,
+                "5": 241.4546356201172
+            },
+            "boundsLocal": {
+                "x": 0,
+                "y": 0,
+                "width": 838.314437866211,
+                "height": 72.12669849395752
+            },
+            "centerPointLocal": {
+                "x": 419.1572189331055,
+                "y": 36.06334924697876
+            },
+            "topLeftLocal": {
+                "x": 0,
+                "y": 0
+            },
+            "opacity": 1,
+            "blendMode": 2,
+            "locked": false,
+            "textContent": {
+                "plainText": ""
+            },
+            "textAlignment": 3,
+            "parentId": "dd037873-ee23-4abe-b8ef-a84ee78be397",
+            "hasChildren": false,
+            "depth": 2,
+            "path": "Page[0] > Artboard[0] > Text[1]",
+            "index": 3
+        },
+        {
+            "id": "a19f2be8-e9c9-4f7d-b397-e7ea37b0e86a",
+            "type": "Text",
+            "name": null,
+            "translation": {
+                "x": 115.515380859375,
+                "y": 1487.4698486328125
+            },
+            "rotation": 0,
+            "rotationInScreen": 0,
+            "transformMatrix": {
+                "0": 0.9999999403953552,
+                "1": 0,
+                "2": 0,
+                "3": 0.9999999403953552,
+                "4": 115.515380859375,
+                "5": 1487.4698486328125
+            },
+            "boundsLocal": {
+                "x": 0,
+                "y": 0,
+                "width": 971.7348734537761,
+                "height": 396.39918009440106
+            },
+            "centerPointLocal": {
+                "x": 485.86743672688806,
+                "y": 198.19959004720053
+            },
+            "topLeftLocal": {
+                "x": 0,
+                "y": 0
+            },
+            "opacity": 1,
+            "blendMode": 2,
+            "locked": false,
+            "textContent": {
+                "plainText": ""
+            },
+            "textAlignment": 1,
+            "parentId": "dd037873-ee23-4abe-b8ef-a84ee78be397",
+            "hasChildren": false,
+            "depth": 2,
+            "path": "Page[0] > Artboard[0] > Text[2]",
+            "index": 4
+        },
+        {
+            "id": "b4436108-5394-4c80-8392-c2b4c7a8644f",
+            "type": "Text",
+            "name": null,
+            "translation": {
+                "x": 920.01171875,
+                "y": 2827.0514311790466
+            },
+            "rotation": 0,
+            "rotationInScreen": 0,
+            "transformMatrix": {
+                "0": 0.9999999403953552,
+                "1": 0,
+                "2": 0,
+                "3": 0.9999999403953552,
+                "4": 920.01171875,
+                "5": 2827.051513671875
+            },
+            "boundsLocal": {
+                "x": 0,
+                "y": -57.629692554473884,
+                "width": 712.989362080892,
+                "height": 185.16163428624472
+            },
+            "centerPointLocal": {
+                "x": 356.494681040446,
+                "y": 34.951124588648476
+            },
+            "topLeftLocal": {
+                "x": 0,
+                "y": -57.629692554473884
+            },
+            "opacity": 1,
+            "blendMode": 2,
+            "locked": false,
+            "textContent": {
+                "plainText": ""
+            },
+            "textAlignment": 1,
+            "parentId": "dd037873-ee23-4abe-b8ef-a84ee78be397",
+            "hasChildren": false,
+            "depth": 2,
+            "path": "Page[0] > Artboard[0] > Text[3]",
+            "index": 5
+        },
+        {
+            "id": "d06c8049-ff16-4a63-8243-f363ea8c99db",
+            "type": "SolidColorShape",
+            "name": null,
+            "translation": {
+                "x": 788.67626953125,
+                "y": 2765.3151030540466
+            },
+            "rotation": 0,
+            "rotationInScreen": 0,
+            "transformMatrix": {
+                "0": 1,
+                "1": 0,
+                "2": 0,
+                "3": 1,
+                "4": 788.67626953125,
+                "5": 2765.315185546875
+            },
+            "boundsLocal": {
+                "x": 7.026795864105225,
+                "y": 6.991663455963135,
+                "width": 70.0751633644104,
+                "height": 70.08642339706421
+            },
+            "centerPointLocal": {
+                "x": 42.064377546310425,
+                "y": 42.03487515449524
+            },
+            "topLeftLocal": {
+                "x": 7.026795864105225,
+                "y": 6.991663455963135
+            },
+            "opacity": 1,
+            "blendMode": 2,
+            "locked": false,
+            "parentId": "dd037873-ee23-4abe-b8ef-a84ee78be397",
+            "hasChildren": false,
+            "depth": 2,
+            "path": "Page[0] > Artboard[0] > SolidColorShape[4]",
+            "index": 6
+        },
+        {
+            "id": "a6b8e6f7-bbf6-4a49-a034-b643c4fe1455",
+            "type": "SolidColorShape",
+            "name": null,
+            "translation": {
+                "x": 803.77001953125,
+                "y": 2876.5846343040466
+            },
+            "rotation": 0,
+            "rotationInScreen": 0,
+            "transformMatrix": {
+                "0": 1,
+                "1": 0,
+                "2": 0,
+                "3": 1,
+                "4": 803.77001953125,
+                "5": 2876.584716796875
+            },
+            "boundsLocal": {
+                "x": 5.517789363861084,
+                "y": 5.453022480010986,
+                "width": 76.1853814125061,
+                "height": 76.22255277633667
+            },
+            "centerPointLocal": {
+                "x": 43.610480070114136,
+                "y": 43.56429886817932
+            },
+            "topLeftLocal": {
+                "x": 5.517789363861084,
+                "y": 5.453022480010986
+            },
+            "opacity": 1,
+            "blendMode": 2,
+            "locked": false,
+            "parentId": "dd037873-ee23-4abe-b8ef-a84ee78be397",
+            "hasChildren": false,
+            "depth": 2,
+            "path": "Page[0] > Artboard[0] > SolidColorShape[5]",
+            "index": 7
+        },
+        {
+            "id": "e4de1cd0-3b01-4f14-8577-f8e4e0ea22ee",
+            "type": "Rectangle",
+            "name": null,
+            "translation": {
+                "x": 109.72456359863281,
+                "y": 1910.3673095703125
+            },
+            "rotation": 0,
+            "rotationInScreen": 0,
+            "transformMatrix": {
+                "0": 1,
+                "1": 0,
+                "2": 0,
+                "3": 1,
+                "4": 109.72456359863281,
+                "5": 1910.3673095703125
+            },
+            "boundsLocal": {
+                "x": -1.2261601194523335,
+                "y": -1.2261601194523335,
+                "width": 654.6376848768151,
+                "height": 165.96728666951438
+            },
+            "centerPointLocal": {
+                "x": 326.0926823189552,
+                "y": 81.75748321530486
+            },
+            "topLeftLocal": {
+                "x": -1.2261601194523335,
+                "y": -1.2261601194523335
+            },
+            "width": 652.1853646379104,
+            "height": 163.51496643060972,
+            "opacity": 1,
+            "blendMode": 2,
+            "locked": false,
+            "fill": {
+                "type": "Color",
+                "color": {
+                    "red": 1,
+                    "green": 0.9686274509803922,
+                    "blue": 0.21176470588235294,
+                    "alpha": 1
+                }
+            },
+            "stroke": {
+                "color": {
+                    "red": 1,
+                    "green": 0.9686274509803922,
+                    "blue": 0.21176470588235294,
+                    "alpha": 1
+                },
+                "width": 2.452320238904667,
+                "position": 0,
+                "dashPattern": [],
+                "dashOffset": 0
+            },
+            "parentId": "dd037873-ee23-4abe-b8ef-a84ee78be397",
+            "hasChildren": false,
+            "depth": 2,
+            "path": "Page[0] > Artboard[0] > Rectangle[6]",
+            "index": 8
+        },
+        {
+            "id": "2799ddd6-9dd1-411b-bcb3-5e47076ca925",
+            "type": "Text",
+            "name": null,
+            "translation": {
+                "x": 435.8172912597656,
+                "y": 2016.4796142578125
+            },
+            "rotation": 0,
+            "rotationInScreen": 0,
+            "transformMatrix": {
+                "0": 0.9999999403953552,
+                "1": 0,
+                "2": 0,
+                "3": 0.9999999403953552,
+                "4": 435.8172912597656,
+                "5": 2016.4796142578125
+            },
+            "boundsLocal": {
+                "x": -252.33151117960614,
+                "y": -57.35501845677694,
+                "width": 504.6630223592123,
+                "height": 74.29124911626181
+            },
+            "centerPointLocal": {
+                "x": 0,
+                "y": -20.209393898646034
+            },
+            "topLeftLocal": {
+                "x": -252.33151117960614,
+                "y": -57.35501845677694
+            },
+            "opacity": 1,
+            "blendMode": 2,
+            "locked": false,
+            "textContent": {
+                "plainText": ""
+            },
+            "textAlignment": 3,
+            "parentId": "dd037873-ee23-4abe-b8ef-a84ee78be397",
+            "hasChildren": false,
+            "depth": 2,
+            "path": "Page[0] > Artboard[0] > Text[7]",
+            "index": 9
+        }
+    ]
+}

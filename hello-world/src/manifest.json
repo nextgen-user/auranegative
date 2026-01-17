@@ -1,0 +1,32 @@
+{
+    "testId": "ef1ef3af-96ad-4f89-9335-5b2bf840fcb1",
+    "name": "Hello World",
+    "version": "1.0.0",
+    "manifestVersion": 2,
+    "experimentalApis": true,
+    "requirements": {
+        "apps": [
+            {
+                "name": "Express",
+                "apiVersion": 1
+            }
+        ],
+        "renditionPreview": true,
+        "experimentalApis": true    
+    },
+    "entryPoints": [
+        {
+            "type": "panel",
+            "id": "panel1",
+            "main": "index.html",
+            "documentSandbox": "code.js",
+            "permissions": {
+                "sandbox": [
+                    "allow-popups-to-escape-sandbox",
+                    "allow-popups",
+                    "allow-downloads"
+                ]
+            }
+        }
+    ]
+}

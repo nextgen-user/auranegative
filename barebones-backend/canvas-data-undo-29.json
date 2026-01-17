@@ -1,0 +1,1826 @@
+{
+  "documentRoot": {
+    "id": "#artwork",
+    "type": "ArtworkRoot"
+  },
+  "pages": [
+    {
+      "id": "f9328684-f9c9-453d-9057-ec796071bf46",
+      "type": "Page",
+      "name": null,
+      "width": 2480.314960629921,
+      "height": 3507.8740157480315,
+      "parentId": "#artwork",
+      "hasChildren": false,
+      "pageIndex": 0,
+      "artboards": [
+        {
+          "id": "833e58e2-8b0a-4555-a077-b40620d98f72",
+          "type": "ab:Artboard",
+          "name": null,
+          "boundsLocal": {
+            "x": 0,
+            "y": 0,
+            "width": 2480.314960629921,
+            "height": 3507.8740157480315
+          },
+          "centerPointLocal": {
+            "x": 1240.1574803149606,
+            "y": 1753.9370078740158
+          },
+          "topLeftLocal": {
+            "x": 0,
+            "y": 0
+          },
+          "width": 2480.314960629921,
+          "height": 3507.8740157480315,
+          "fill": {
+            "type": "Color",
+            "color": {
+              "red": 0.10196078431372549,
+              "green": 0.30980392156862746,
+              "blue": 0,
+              "alpha": 1
+            }
+          },
+          "parentId": "f9328684-f9c9-453d-9057-ec796071bf46",
+          "hasChildren": true,
+          "childCount": 7,
+          "depth": 1,
+          "path": "Page[0] > Artboard[0]",
+          "index": 1,
+          "children": [
+            {
+              "id": "005b6f5d-80de-437a-8315-20e7927a2ed9",
+              "type": "Group",
+              "name": null,
+              "translation": {
+                "x": 1131,
+                "y": 191
+              },
+              "rotation": 0,
+              "rotationInScreen": 0,
+              "transformMatrix": {
+                "0": 1,
+                "1": 0,
+                "2": 0,
+                "3": 1,
+                "4": 1131,
+                "5": 191
+              },
+              "boundsLocal": {
+                "x": -26.510635375976562,
+                "y": 9.5367431640625e-7,
+                "width": 395.81358337402344,
+                "height": 144.71510219573975
+              },
+              "centerPointLocal": {
+                "x": 171.39615631103516,
+                "y": 72.35755205154419
+              },
+              "topLeftLocal": {
+                "x": -26.510635375976562,
+                "y": 9.5367431640625e-7
+              },
+              "opacity": 1,
+              "blendMode": 1,
+              "locked": false,
+              "parentId": "833e58e2-8b0a-4555-a077-b40620d98f72",
+              "hasChildren": true,
+              "childCount": 3,
+              "depth": 2,
+              "path": "Page[0] > Artboard[0] > Group[0]",
+              "index": 2,
+              "children": [
+                {
+                  "id": "273a49f1-734e-4ac0-abd2-4d18a842b618",
+                  "type": "SolidColorShape",
+                  "name": null,
+                  "translation": {
+                    "x": 83.13634669780731,
+                    "y": -5.3439412117004395
+                  },
+                  "rotation": 180,
+                  "rotationInScreen": 180,
+                  "transformMatrix": {
+                    "0": -1,
+                    "1": 1.2246468525851679e-16,
+                    "2": 1.2246468525851679e-16,
+                    "3": 1,
+                    "4": 83.13634490966797,
+                    "5": -5.3439412117004395
+                  },
+                  "boundsLocal": {
+                    "x": 5.392474174499512,
+                    "y": 5.343942165374756,
+                    "width": 104.25450611114502,
+                    "height": 104.31741189956665
+                  },
+                  "centerPointLocal": {
+                    "x": 57.51972723007202,
+                    "y": 57.50264811515808
+                  },
+                  "topLeftLocal": {
+                    "x": 5.392474174499512,
+                    "y": 5.343942165374756
+                  },
+                  "opacity": 1,
+                  "blendMode": 2,
+                  "locked": false,
+                  "parentId": "005b6f5d-80de-437a-8315-20e7927a2ed9",
+                  "hasChildren": false,
+                  "depth": 3,
+                  "path": "Page[0] > Artboard[0] > Group[0] > SolidColorShape[0]",
+                  "index": 3,
+                  "children": []
+                },
+                {
+                  "id": "e9bec576-04be-4833-b3f2-660fb2fc6389",
+                  "type": "SolidColorShape",
+                  "name": null,
+                  "translation": {
+                    "x": 259.65598571300507,
+                    "y": -5.343935012817383
+                  },
+                  "rotation": 0,
+                  "rotationInScreen": 0,
+                  "transformMatrix": {
+                    "0": 1,
+                    "1": 0,
+                    "2": 0,
+                    "3": 1,
+                    "4": 259.6559753417969,
+                    "5": -5.343935012817383
+                  },
+                  "boundsLocal": {
+                    "x": 5.392474174499512,
+                    "y": 5.343941688537598,
+                    "width": 104.25449848175049,
+                    "height": 104.31740474700928
+                  },
+                  "centerPointLocal": {
+                    "x": 57.519723415374756,
+                    "y": 57.502644062042236
+                  },
+                  "topLeftLocal": {
+                    "x": 5.392474174499512,
+                    "y": 5.343941688537598
+                  },
+                  "opacity": 1,
+                  "blendMode": 2,
+                  "locked": false,
+                  "parentId": "005b6f5d-80de-437a-8315-20e7927a2ed9",
+                  "hasChildren": false,
+                  "depth": 3,
+                  "path": "Page[0] > Artboard[0] > Group[0] > SolidColorShape[1]",
+                  "index": 4,
+                  "children": []
+                },
+                {
+                  "id": "1c6488d4-69aa-441b-8693-d5a43c650b4d",
+                  "type": "Text",
+                  "name": null,
+                  "translation": {
+                    "x": 171.58909606933594,
+                    "y": 68.81584167480469
+                  },
+                  "rotation": 0,
+                  "rotationInScreen": 0,
+                  "transformMatrix": {
+                    "0": 0.9999999403953552,
+                    "1": 0,
+                    "2": 0,
+                    "3": 0.9999999403953552,
+                    "4": 171.58909606933594,
+                    "5": 68.81584167480469
+                  },
+                  "boundsLocal": {
+                    "x": -97.43627707163493,
+                    "y": -41.282435258229576,
+                    "width": 194.87255414326987,
+                    "height": 117.18170245488486
+                  },
+                  "centerPointLocal": {
+                    "x": 0,
+                    "y": 17.308415969212852
+                  },
+                  "topLeftLocal": {
+                    "x": -97.43627707163493,
+                    "y": -41.282435258229576
+                  },
+                  "opacity": 1,
+                  "blendMode": 2,
+                  "locked": false,
+                  "textContent": {
+                    "text": "रेडरॉक\nकिचन"
+                  },
+                  "textAlignment": 3,
+                  "parentId": "005b6f5d-80de-437a-8315-20e7927a2ed9",
+                  "hasChildren": false,
+                  "depth": 3,
+                  "path": "Page[0] > Artboard[0] > Group[0] > Text[2]",
+                  "index": 5,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "1e3f5c6a-3b9f-4da8-8c96-bbd58c2efbef",
+              "type": "Group",
+              "name": null,
+              "translation": {
+                "x": 0,
+                "y": 2066.197717666626
+              },
+              "rotation": 0,
+              "rotationInScreen": 0,
+              "transformMatrix": {
+                "0": 1,
+                "1": 0,
+                "2": 0,
+                "3": 1,
+                "4": 0,
+                "5": 2066.19775390625
+              },
+              "boundsLocal": {
+                "x": 0,
+                "y": 0.000030517578125,
+                "width": 2480.31494140625,
+                "height": 1443.3271179199219
+              },
+              "centerPointLocal": {
+                "x": 1240.157470703125,
+                "y": 721.6635894775391
+              },
+              "topLeftLocal": {
+                "x": 0,
+                "y": 0.000030517578125
+              },
+              "opacity": 1,
+              "blendMode": 1,
+              "locked": false,
+              "parentId": "833e58e2-8b0a-4555-a077-b40620d98f72",
+              "hasChildren": true,
+              "childCount": 2,
+              "depth": 2,
+              "path": "Page[0] > Artboard[0] > Group[1]",
+              "index": 6,
+              "children": [
+                {
+                  "id": "1331fb09-98c4-4d2a-a65d-55ef885a3b6f",
+                  "type": "MediaContainer",
+                  "name": null,
+                  "translation": {
+                    "x": -80.384521484375,
+                    "y": -214.79150390625
+                  },
+                  "rotation": 0,
+                  "rotationInScreen": 0,
+                  "transformMatrix": {
+                    "0": 1,
+                    "1": 0,
+                    "2": 0,
+                    "3": 1,
+                    "4": -80.384521484375,
+                    "5": -214.79150390625
+                  },
+                  "boundsLocal": {
+                    "x": 80.384521484375,
+                    "y": 214.79153442382812,
+                    "width": 2480.31494140625,
+                    "height": 1443.3271179199219
+                  },
+                  "centerPointLocal": {
+                    "x": 1320.5419921875,
+                    "y": 936.4550933837891
+                  },
+                  "topLeftLocal": {
+                    "x": 80.384521484375,
+                    "y": 214.79153442382812
+                  },
+                  "opacity": 1,
+                  "blendMode": 2,
+                  "locked": false,
+                  "parentId": "1e3f5c6a-3b9f-4da8-8c96-bbd58c2efbef",
+                  "hasChildren": false,
+                  "depth": 3,
+                  "path": "Page[0] > Artboard[0] > Group[1] > MediaContainer[0]",
+                  "index": 7,
+                  "children": []
+                },
+                {
+                  "id": "721bffa9-1543-41e3-94a8-cd1ad192b759",
+                  "type": "Ellipse",
+                  "name": null,
+                  "translation": {
+                    "x": 897.834228515625,
+                    "y": 650.2158203125
+                  },
+                  "rotation": 0,
+                  "rotationInScreen": 0,
+                  "transformMatrix": {
+                    "0": 1,
+                    "1": 0,
+                    "2": 0,
+                    "3": 1,
+                    "4": 897.834228515625,
+                    "5": 650.2158203125
+                  },
+                  "boundsLocal": {
+                    "x": -65,
+                    "y": -65,
+                    "width": 1617.3037712391215,
+                    "height": 417.3554513475187
+                  },
+                  "centerPointLocal": {
+                    "x": 743.6518856195607,
+                    "y": 143.67772567375934
+                  },
+                  "topLeftLocal": {
+                    "x": -65,
+                    "y": -65
+                  },
+                  "opacity": 0.52,
+                  "blendMode": 2,
+                  "locked": false,
+                  "fill": {
+                    "type": "Color",
+                    "color": {
+                      "red": 0.0784313725490196,
+                      "green": 0.2,
+                      "blue": 0.01568627450980392,
+                      "alpha": 1
+                    }
+                  },
+                  "stroke": {},
+                  "cornerRadiusX": 743.6518856195607,
+                  "cornerRadiusY": 143.67772567375934,
+                  "parentId": "1e3f5c6a-3b9f-4da8-8c96-bbd58c2efbef",
+                  "hasChildren": false,
+                  "depth": 3,
+                  "path": "Page[0] > Artboard[0] > Group[1] > Ellipse[1]",
+                  "index": 8,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "d327e6d9-63a0-4333-9c2d-8a655f3dd169",
+              "type": "Group",
+              "name": null,
+              "translation": {
+                "x": 14,
+                "y": 1690
+              },
+              "rotation": 0,
+              "rotationInScreen": 0,
+              "transformMatrix": {
+                "0": 1,
+                "1": 0,
+                "2": 0,
+                "3": 1,
+                "4": 14,
+                "5": 1690
+              },
+              "boundsLocal": {
+                "x": -9.940200805664062,
+                "y": 10.537699699401855,
+                "width": 610.9582672119141,
+                "height": 633.8563432693481
+              },
+              "centerPointLocal": {
+                "x": 295.53893280029297,
+                "y": 327.4658713340759
+              },
+              "topLeftLocal": {
+                "x": -9.940200805664062,
+                "y": 10.537699699401855
+              },
+              "opacity": 1,
+              "blendMode": 1,
+              "locked": false,
+              "parentId": "833e58e2-8b0a-4555-a077-b40620d98f72",
+              "hasChildren": true,
+              "childCount": 2,
+              "depth": 2,
+              "path": "Page[0] > Artboard[0] > Group[2]",
+              "index": 9,
+              "children": [
+                {
+                  "id": "b6b4bcb2-47b8-4d73-a3fc-aa564e68e45c",
+                  "type": "Ellipse",
+                  "name": null,
+                  "translation": {
+                    "x": -9.940200805664062,
+                    "y": 10.537699699401855
+                  },
+                  "rotation": 0,
+                  "rotationInScreen": 0,
+                  "transformMatrix": {
+                    "0": 1,
+                    "1": 0,
+                    "2": 0,
+                    "3": 1,
+                    "4": -9.940200805664062,
+                    "5": 10.537699699401855
+                  },
+                  "boundsLocal": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 610.9582587318862,
+                    "height": 633.8563296718925
+                  },
+                  "centerPointLocal": {
+                    "x": 305.4791293659431,
+                    "y": 316.92816483594623
+                  },
+                  "topLeftLocal": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "opacity": 1,
+                  "blendMode": 2,
+                  "locked": false,
+                  "fill": {
+                    "type": "Color",
+                    "color": {
+                      "red": 1,
+                      "green": 0.9019607843137255,
+                      "blue": 0,
+                      "alpha": 1
+                    }
+                  },
+                  "stroke": {
+                    "color": {
+                      "red": 0.9176470588235294,
+                      "green": 0.2196078431372549,
+                      "blue": 0.1607843137254902,
+                      "alpha": 1
+                    },
+                    "width": 0,
+                    "position": 0,
+                    "dashPattern": [],
+                    "dashOffset": 0
+                  },
+                  "cornerRadiusX": 305.4791293659431,
+                  "cornerRadiusY": 316.92816483594623,
+                  "parentId": "d327e6d9-63a0-4333-9c2d-8a655f3dd169",
+                  "hasChildren": false,
+                  "depth": 3,
+                  "path": "Page[0] > Artboard[0] > Group[2] > Ellipse[0]",
+                  "index": 10,
+                  "children": []
+                },
+                {
+                  "id": "ae91cc56-d9f6-4031-9d5b-5446546df5bb",
+                  "type": "Text",
+                  "name": null,
+                  "translation": {
+                    "x": 268.81475830078125,
+                    "y": 299.69586181640625
+                  },
+                  "rotation": 0,
+                  "rotationInScreen": 0,
+                  "transformMatrix": {
+                    "0": 0.9999999403953552,
+                    "1": 0,
+                    "2": 0,
+                    "3": 0.9999999403953552,
+                    "4": 268.81475830078125,
+                    "5": 299.69586181640625
+                  },
+                  "boundsLocal": {
+                    "x": -202.44078636169436,
+                    "y": -158.29130808512372,
+                    "width": 404.8816045125326,
+                    "height": 424.523131052653
+                  },
+                  "centerPointLocal": {
+                    "x": 0.000015894571930630264,
+                    "y": 53.97025744120279
+                  },
+                  "topLeftLocal": {
+                    "x": -202.44078636169436,
+                    "y": -158.29130808512372
+                  },
+                  "opacity": 1,
+                  "blendMode": 2,
+                  "locked": false,
+                  "textContent": {
+                    "text": "   30%\nछूट"
+                  },
+                  "textAlignment": 3,
+                  "parentId": "d327e6d9-63a0-4333-9c2d-8a655f3dd169",
+                  "hasChildren": false,
+                  "depth": 3,
+                  "path": "Page[0] > Artboard[0] > Group[2] > Text[1]",
+                  "index": 11,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "766be8a8-d0ea-435c-9d29-5cae41300453",
+              "type": "MediaContainer",
+              "name": null,
+              "translation": {
+                "x": -202.48202514648438,
+                "y": 1557.2314453125
+              },
+              "rotation": 351.9999996139144,
+              "rotationInScreen": 351.9999996139144,
+              "transformMatrix": {
+                "0": 0.9902680516242981,
+                "1": -0.13917310535907745,
+                "2": 0.13917310535907745,
+                "3": 0.9902680516242981,
+                "4": -202.48202514648438,
+                "5": 1557.2314453125
+              },
+              "boundsLocal": {
+                "x": 389.2276916503906,
+                "y": 218.91099548339844,
+                "width": 2000.7254333496094,
+                "height": 1316.6825103759766
+              },
+              "centerPointLocal": {
+                "x": 1389.5904083251953,
+                "y": 877.2522506713867
+              },
+              "topLeftLocal": {
+                "x": 389.2276916503906,
+                "y": 218.91099548339844
+              },
+              "opacity": 1,
+              "blendMode": 2,
+              "locked": false,
+              "parentId": "833e58e2-8b0a-4555-a077-b40620d98f72",
+              "hasChildren": false,
+              "depth": 2,
+              "path": "Page[0] > Artboard[0] > MediaContainer[3]",
+              "index": 12,
+              "children": []
+            },
+            {
+              "id": "7cbe9b24-369b-4585-a50b-b3641cf60baa",
+              "type": "Group",
+              "name": null,
+              "translation": {
+                "x": 88,
+                "y": 3177
+              },
+              "rotation": 0,
+              "rotationInScreen": 0,
+              "transformMatrix": {
+                "0": 1,
+                "1": 0,
+                "2": 0,
+                "3": 1,
+                "4": 88,
+                "5": 3177
+              },
+              "boundsLocal": {
+                "x": 675.8878784179688,
+                "y": 22.180583953857422,
+                "width": 1075.5858764648438,
+                "height": 91.10602951049805
+              },
+              "centerPointLocal": {
+                "x": 1213.6808166503906,
+                "y": 67.73359870910645
+              },
+              "topLeftLocal": {
+                "x": 675.8878784179688,
+                "y": 22.180583953857422
+              },
+              "opacity": 1,
+              "blendMode": 1,
+              "locked": false,
+              "parentId": "833e58e2-8b0a-4555-a077-b40620d98f72",
+              "hasChildren": true,
+              "childCount": 1,
+              "depth": 2,
+              "path": "Page[0] > Artboard[0] > Group[4]",
+              "index": 13,
+              "children": [
+                {
+                  "id": "3bbd7b95-e532-4768-aec2-53bca4248ff1",
+                  "type": "Text",
+                  "name": null,
+                  "translation": {
+                    "x": 675.8878784179688,
+                    "y": 92.51710510253906
+                  },
+                  "rotation": 0,
+                  "rotationInScreen": 0,
+                  "transformMatrix": {
+                    "0": 0.9999999403953552,
+                    "1": 0,
+                    "2": 0,
+                    "3": 0.9999999403953552,
+                    "4": 675.8878784179688,
+                    "5": 92.51710510253906
+                  },
+                  "boundsLocal": {
+                    "x": 0,
+                    "y": -70.33652464548747,
+                    "width": 1075.5859375,
+                    "height": 91.10603332519531
+                  },
+                  "centerPointLocal": {
+                    "x": 537.79296875,
+                    "y": -24.783507982889816
+                  },
+                  "topLeftLocal": {
+                    "x": 0,
+                    "y": -70.33652464548747
+                  },
+                  "opacity": 1,
+                  "blendMode": 2,
+                  "locked": false,
+                  "textContent": {
+                    "text": "redrockkitchen.site.com."
+                  },
+                  "textAlignment": 1,
+                  "parentId": "7cbe9b24-369b-4585-a50b-b3641cf60baa",
+                  "hasChildren": false,
+                  "depth": 3,
+                  "path": "Page[0] > Artboard[0] > Group[4] > Text[0]",
+                  "index": 14,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "88f1ea80-7d9b-4206-8a20-7617f9858cc3",
+              "type": "Group",
+              "name": null,
+              "translation": {
+                "x": -214,
+                "y": 438
+              },
+              "rotation": 0,
+              "rotationInScreen": 0,
+              "transformMatrix": {
+                "0": 1,
+                "1": 0,
+                "2": 0,
+                "3": 1,
+                "4": -214,
+                "5": 438
+              },
+              "boundsLocal": {
+                "x": 682.1791381835938,
+                "y": 166.3695831298828,
+                "width": 1667.1482543945312,
+                "height": 720.2845916748047
+              },
+              "centerPointLocal": {
+                "x": 1515.7532653808594,
+                "y": 526.5118789672852
+              },
+              "topLeftLocal": {
+                "x": 682.1791381835938,
+                "y": 166.3695831298828
+              },
+              "opacity": 1,
+              "blendMode": 1,
+              "locked": false,
+              "parentId": "833e58e2-8b0a-4555-a077-b40620d98f72",
+              "hasChildren": true,
+              "childCount": 2,
+              "depth": 2,
+              "path": "Page[0] > Artboard[0] > Group[5]",
+              "index": 15,
+              "children": [
+                {
+                  "id": "d5e0d0da-2c1c-4a31-92a4-4bab88114187",
+                  "type": "Text",
+                  "name": null,
+                  "translation": {
+                    "x": 1522.7196044921875,
+                    "y": 581.4824829101562
+                  },
+                  "rotation": 0,
+                  "rotationInScreen": 0,
+                  "transformMatrix": {
+                    "0": 0.9999999403953552,
+                    "1": 0,
+                    "2": 0,
+                    "3": 0.9999999403953552,
+                    "4": 1522.7196044921875,
+                    "5": 581.4824829101562
+                  },
+                  "boundsLocal": {
+                    "x": -816.470209757487,
+                    "y": -415.11290868123376,
+                    "width": 1632.940419514974,
+                    "height": 578.151273727417
+                  },
+                  "centerPointLocal": {
+                    "x": 0,
+                    "y": -126.03727181752527
+                  },
+                  "topLeftLocal": {
+                    "x": -816.470209757487,
+                    "y": -415.11290868123376
+                  },
+                  "opacity": 1,
+                  "blendMode": 2,
+                  "locked": false,
+                  "textContent": {
+                    "text": "शाही दावत"
+                  },
+                  "textAlignment": 3,
+                  "parentId": "88f1ea80-7d9b-4206-8a20-7617f9858cc3",
+                  "hasChildren": false,
+                  "depth": 3,
+                  "path": "Page[0] > Artboard[0] > Group[5] > Text[0]",
+                  "index": 16,
+                  "children": []
+                },
+                {
+                  "id": "13346bf3-f6ca-40dc-8106-110946342750",
+                  "type": "Text",
+                  "name": null,
+                  "translation": {
+                    "x": 1515.7532958984375,
+                    "y": 797.2232666015625
+                  },
+                  "rotation": 0,
+                  "rotationInScreen": 0,
+                  "transformMatrix": {
+                    "0": 0.9999999403953552,
+                    "1": 0,
+                    "2": 0,
+                    "3": 0.9999999403953552,
+                    "4": 1515.7532958984375,
+                    "5": 797.2232666015625
+                  },
+                  "boundsLocal": {
+                    "x": -833.5741678873699,
+                    "y": -227.70053545633954,
+                    "width": 1667.1483357747397,
+                    "height": 317.13143984476727
+                  },
+                  "centerPointLocal": {
+                    "x": 0,
+                    "y": -69.1348155339559
+                  },
+                  "topLeftLocal": {
+                    "x": -833.5741678873699,
+                    "y": -227.70053545633954
+                  },
+                  "opacity": 1,
+                  "blendMode": 2,
+                  "locked": false,
+                  "textContent": {
+                    "text": "विशेष ऑफ़र"
+                  },
+                  "textAlignment": 3,
+                  "parentId": "88f1ea80-7d9b-4206-8a20-7617f9858cc3",
+                  "hasChildren": false,
+                  "depth": 3,
+                  "path": "Page[0] > Artboard[0] > Group[5] > Text[1]",
+                  "index": 17,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "ea97b124-5acf-49d9-b8f2-1156c95b05f7",
+              "type": "Group",
+              "name": null,
+              "translation": {
+                "x": 30.563098907470703,
+                "y": 376.7357482910156
+              },
+              "rotation": 0,
+              "rotationInScreen": 0,
+              "transformMatrix": {
+                "0": 1,
+                "1": 0,
+                "2": 0,
+                "3": 1,
+                "4": 30.563098907470703,
+                "5": 376.7357482910156
+              },
+              "boundsLocal": {
+                "x": 0.000011444091796875,
+                "y": 889.0982055664062,
+                "width": 2287.409656524658,
+                "height": 1600.7277221679688
+              },
+              "centerPointLocal": {
+                "x": 1143.704839706421,
+                "y": 1689.4620666503906
+              },
+              "topLeftLocal": {
+                "x": 0.000011444091796875,
+                "y": 889.0982055664062
+              },
+              "opacity": 1,
+              "blendMode": 1,
+              "locked": false,
+              "parentId": "833e58e2-8b0a-4555-a077-b40620d98f72",
+              "hasChildren": true,
+              "childCount": 2,
+              "depth": 2,
+              "path": "Page[0] > Artboard[0] > Group[6]",
+              "index": 18,
+              "children": [
+                {
+                  "id": "9be02302-4ad5-47f7-996f-343ec9e21261",
+                  "type": "MediaContainer",
+                  "name": null,
+                  "translation": {
+                    "x": 362.2606201171875,
+                    "y": 1812.656982421875
+                  },
+                  "rotation": 49.000000894386346,
+                  "rotationInScreen": 49.000000894386346,
+                  "transformMatrix": {
+                    "0": 0.6560590267181396,
+                    "1": 0.7547096014022827,
+                    "2": -0.7547096014022827,
+                    "3": 0.6560590267181396,
+                    "4": 362.2606201171875,
+                    "5": 1812.656982421875
+                  },
+                  "boundsLocal": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 480,
+                    "height": 480
+                  },
+                  "centerPointLocal": {
+                    "x": 240,
+                    "y": 240
+                  },
+                  "topLeftLocal": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "opacity": 1,
+                  "blendMode": 2,
+                  "locked": false,
+                  "parentId": "ea97b124-5acf-49d9-b8f2-1156c95b05f7",
+                  "hasChildren": false,
+                  "depth": 3,
+                  "path": "Page[0] > Artboard[0] > Group[6] > MediaContainer[0]",
+                  "index": 19,
+                  "children": []
+                },
+                {
+                  "id": "ab5be451-1fab-4f9b-b5bb-4f6b8491dc11",
+                  "type": "MediaContainer",
+                  "name": null,
+                  "translation": {
+                    "x": 2287.40962600708,
+                    "y": 1168.408447265625
+                  },
+                  "rotation": 174.00000005983247,
+                  "rotationInScreen": 174.00000005983247,
+                  "transformMatrix": {
+                    "0": -0.9945219159126282,
+                    "1": 0.10452846437692642,
+                    "2": -0.10452846437692642,
+                    "3": -0.9945219159126282,
+                    "4": 2287.40966796875,
+                    "5": 1168.408447265625
+                  },
+                  "boundsLocal": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 280.8487243652344,
+                    "height": 280.8487243652344
+                  },
+                  "centerPointLocal": {
+                    "x": 140.4243621826172,
+                    "y": 140.4243621826172
+                  },
+                  "topLeftLocal": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "opacity": 1,
+                  "blendMode": 2,
+                  "locked": false,
+                  "parentId": "ea97b124-5acf-49d9-b8f2-1156c95b05f7",
+                  "hasChildren": false,
+                  "depth": 3,
+                  "path": "Page[0] > Artboard[0] > Group[6] > MediaContainer[1]",
+                  "index": 20,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "totalNodes": 21,
+  "nodeTypes": {
+    "Page": 1,
+    "ab:Artboard": 1,
+    "Group": 6,
+    "SolidColorShape": 2,
+    "Text": 5,
+    "MediaContainer": 4,
+    "Ellipse": 2
+  },
+  "allElements": [
+    {
+      "id": "f9328684-f9c9-453d-9057-ec796071bf46",
+      "type": "Page",
+      "name": null,
+      "width": 2480.314960629921,
+      "height": 3507.8740157480315,
+      "parentId": "#artwork",
+      "hasChildren": false,
+      "pageIndex": 0,
+      "depth": 0,
+      "index": 0,
+      "path": "Page[0]"
+    },
+    {
+      "id": "833e58e2-8b0a-4555-a077-b40620d98f72",
+      "type": "ab:Artboard",
+      "name": null,
+      "boundsLocal": {
+        "x": 0,
+        "y": 0,
+        "width": 2480.314960629921,
+        "height": 3507.8740157480315
+      },
+      "centerPointLocal": {
+        "x": 1240.1574803149606,
+        "y": 1753.9370078740158
+      },
+      "topLeftLocal": {
+        "x": 0,
+        "y": 0
+      },
+      "width": 2480.314960629921,
+      "height": 3507.8740157480315,
+      "fill": {
+        "type": "Color",
+        "color": {
+          "red": 0.10196078431372549,
+          "green": 0.30980392156862746,
+          "blue": 0,
+          "alpha": 1
+        }
+      },
+      "parentId": "f9328684-f9c9-453d-9057-ec796071bf46",
+      "hasChildren": true,
+      "childCount": 7,
+      "depth": 1,
+      "path": "Page[0] > Artboard[0]",
+      "index": 1
+    },
+    {
+      "id": "005b6f5d-80de-437a-8315-20e7927a2ed9",
+      "type": "Group",
+      "name": null,
+      "translation": {
+        "x": 1131,
+        "y": 191
+      },
+      "rotation": 0,
+      "rotationInScreen": 0,
+      "transformMatrix": {
+        "0": 1,
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 1131,
+        "5": 191
+      },
+      "boundsLocal": {
+        "x": -26.510635375976562,
+        "y": 9.5367431640625e-7,
+        "width": 395.81358337402344,
+        "height": 144.71510219573975
+      },
+      "centerPointLocal": {
+        "x": 171.39615631103516,
+        "y": 72.35755205154419
+      },
+      "topLeftLocal": {
+        "x": -26.510635375976562,
+        "y": 9.5367431640625e-7
+      },
+      "opacity": 1,
+      "blendMode": 1,
+      "locked": false,
+      "parentId": "833e58e2-8b0a-4555-a077-b40620d98f72",
+      "hasChildren": true,
+      "childCount": 3,
+      "depth": 2,
+      "path": "Page[0] > Artboard[0] > Group[0]",
+      "index": 2
+    },
+    {
+      "id": "273a49f1-734e-4ac0-abd2-4d18a842b618",
+      "type": "SolidColorShape",
+      "name": null,
+      "translation": {
+        "x": 83.13634669780731,
+        "y": -5.3439412117004395
+      },
+      "rotation": 180,
+      "rotationInScreen": 180,
+      "transformMatrix": {
+        "0": -1,
+        "1": 1.2246468525851679e-16,
+        "2": 1.2246468525851679e-16,
+        "3": 1,
+        "4": 83.13634490966797,
+        "5": -5.3439412117004395
+      },
+      "boundsLocal": {
+        "x": 5.392474174499512,
+        "y": 5.343942165374756,
+        "width": 104.25450611114502,
+        "height": 104.31741189956665
+      },
+      "centerPointLocal": {
+        "x": 57.51972723007202,
+        "y": 57.50264811515808
+      },
+      "topLeftLocal": {
+        "x": 5.392474174499512,
+        "y": 5.343942165374756
+      },
+      "opacity": 1,
+      "blendMode": 2,
+      "locked": false,
+      "parentId": "005b6f5d-80de-437a-8315-20e7927a2ed9",
+      "hasChildren": false,
+      "depth": 3,
+      "path": "Page[0] > Artboard[0] > Group[0] > SolidColorShape[0]",
+      "index": 3
+    },
+    {
+      "id": "e9bec576-04be-4833-b3f2-660fb2fc6389",
+      "type": "SolidColorShape",
+      "name": null,
+      "translation": {
+        "x": 259.65598571300507,
+        "y": -5.343935012817383
+      },
+      "rotation": 0,
+      "rotationInScreen": 0,
+      "transformMatrix": {
+        "0": 1,
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 259.6559753417969,
+        "5": -5.343935012817383
+      },
+      "boundsLocal": {
+        "x": 5.392474174499512,
+        "y": 5.343941688537598,
+        "width": 104.25449848175049,
+        "height": 104.31740474700928
+      },
+      "centerPointLocal": {
+        "x": 57.519723415374756,
+        "y": 57.502644062042236
+      },
+      "topLeftLocal": {
+        "x": 5.392474174499512,
+        "y": 5.343941688537598
+      },
+      "opacity": 1,
+      "blendMode": 2,
+      "locked": false,
+      "parentId": "005b6f5d-80de-437a-8315-20e7927a2ed9",
+      "hasChildren": false,
+      "depth": 3,
+      "path": "Page[0] > Artboard[0] > Group[0] > SolidColorShape[1]",
+      "index": 4
+    },
+    {
+      "id": "1c6488d4-69aa-441b-8693-d5a43c650b4d",
+      "type": "Text",
+      "name": null,
+      "translation": {
+        "x": 171.58909606933594,
+        "y": 68.81584167480469
+      },
+      "rotation": 0,
+      "rotationInScreen": 0,
+      "transformMatrix": {
+        "0": 0.9999999403953552,
+        "1": 0,
+        "2": 0,
+        "3": 0.9999999403953552,
+        "4": 171.58909606933594,
+        "5": 68.81584167480469
+      },
+      "boundsLocal": {
+        "x": -97.43627707163493,
+        "y": -41.282435258229576,
+        "width": 194.87255414326987,
+        "height": 117.18170245488486
+      },
+      "centerPointLocal": {
+        "x": 0,
+        "y": 17.308415969212852
+      },
+      "topLeftLocal": {
+        "x": -97.43627707163493,
+        "y": -41.282435258229576
+      },
+      "opacity": 1,
+      "blendMode": 2,
+      "locked": false,
+      "textContent": {
+        "text": "रेडरॉक\nकिचन"
+      },
+      "textAlignment": 3,
+      "parentId": "005b6f5d-80de-437a-8315-20e7927a2ed9",
+      "hasChildren": false,
+      "depth": 3,
+      "path": "Page[0] > Artboard[0] > Group[0] > Text[2]",
+      "index": 5
+    },
+    {
+      "id": "1e3f5c6a-3b9f-4da8-8c96-bbd58c2efbef",
+      "type": "Group",
+      "name": null,
+      "translation": {
+        "x": 0,
+        "y": 2066.197717666626
+      },
+      "rotation": 0,
+      "rotationInScreen": 0,
+      "transformMatrix": {
+        "0": 1,
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 0,
+        "5": 2066.19775390625
+      },
+      "boundsLocal": {
+        "x": 0,
+        "y": 0.000030517578125,
+        "width": 2480.31494140625,
+        "height": 1443.3271179199219
+      },
+      "centerPointLocal": {
+        "x": 1240.157470703125,
+        "y": 721.6635894775391
+      },
+      "topLeftLocal": {
+        "x": 0,
+        "y": 0.000030517578125
+      },
+      "opacity": 1,
+      "blendMode": 1,
+      "locked": false,
+      "parentId": "833e58e2-8b0a-4555-a077-b40620d98f72",
+      "hasChildren": true,
+      "childCount": 2,
+      "depth": 2,
+      "path": "Page[0] > Artboard[0] > Group[1]",
+      "index": 6
+    },
+    {
+      "id": "1331fb09-98c4-4d2a-a65d-55ef885a3b6f",
+      "type": "MediaContainer",
+      "name": null,
+      "translation": {
+        "x": -80.384521484375,
+        "y": -214.79150390625
+      },
+      "rotation": 0,
+      "rotationInScreen": 0,
+      "transformMatrix": {
+        "0": 1,
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": -80.384521484375,
+        "5": -214.79150390625
+      },
+      "boundsLocal": {
+        "x": 80.384521484375,
+        "y": 214.79153442382812,
+        "width": 2480.31494140625,
+        "height": 1443.3271179199219
+      },
+      "centerPointLocal": {
+        "x": 1320.5419921875,
+        "y": 936.4550933837891
+      },
+      "topLeftLocal": {
+        "x": 80.384521484375,
+        "y": 214.79153442382812
+      },
+      "opacity": 1,
+      "blendMode": 2,
+      "locked": false,
+      "parentId": "1e3f5c6a-3b9f-4da8-8c96-bbd58c2efbef",
+      "hasChildren": false,
+      "depth": 3,
+      "path": "Page[0] > Artboard[0] > Group[1] > MediaContainer[0]",
+      "index": 7
+    },
+    {
+      "id": "721bffa9-1543-41e3-94a8-cd1ad192b759",
+      "type": "Ellipse",
+      "name": null,
+      "translation": {
+        "x": 897.834228515625,
+        "y": 650.2158203125
+      },
+      "rotation": 0,
+      "rotationInScreen": 0,
+      "transformMatrix": {
+        "0": 1,
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 897.834228515625,
+        "5": 650.2158203125
+      },
+      "boundsLocal": {
+        "x": -65,
+        "y": -65,
+        "width": 1617.3037712391215,
+        "height": 417.3554513475187
+      },
+      "centerPointLocal": {
+        "x": 743.6518856195607,
+        "y": 143.67772567375934
+      },
+      "topLeftLocal": {
+        "x": -65,
+        "y": -65
+      },
+      "opacity": 0.52,
+      "blendMode": 2,
+      "locked": false,
+      "fill": {
+        "type": "Color",
+        "color": {
+          "red": 0.0784313725490196,
+          "green": 0.2,
+          "blue": 0.01568627450980392,
+          "alpha": 1
+        }
+      },
+      "stroke": {},
+      "cornerRadiusX": 743.6518856195607,
+      "cornerRadiusY": 143.67772567375934,
+      "parentId": "1e3f5c6a-3b9f-4da8-8c96-bbd58c2efbef",
+      "hasChildren": false,
+      "depth": 3,
+      "path": "Page[0] > Artboard[0] > Group[1] > Ellipse[1]",
+      "index": 8
+    },
+    {
+      "id": "d327e6d9-63a0-4333-9c2d-8a655f3dd169",
+      "type": "Group",
+      "name": null,
+      "translation": {
+        "x": 14,
+        "y": 1690
+      },
+      "rotation": 0,
+      "rotationInScreen": 0,
+      "transformMatrix": {
+        "0": 1,
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 14,
+        "5": 1690
+      },
+      "boundsLocal": {
+        "x": -9.940200805664062,
+        "y": 10.537699699401855,
+        "width": 610.9582672119141,
+        "height": 633.8563432693481
+      },
+      "centerPointLocal": {
+        "x": 295.53893280029297,
+        "y": 327.4658713340759
+      },
+      "topLeftLocal": {
+        "x": -9.940200805664062,
+        "y": 10.537699699401855
+      },
+      "opacity": 1,
+      "blendMode": 1,
+      "locked": false,
+      "parentId": "833e58e2-8b0a-4555-a077-b40620d98f72",
+      "hasChildren": true,
+      "childCount": 2,
+      "depth": 2,
+      "path": "Page[0] > Artboard[0] > Group[2]",
+      "index": 9
+    },
+    {
+      "id": "b6b4bcb2-47b8-4d73-a3fc-aa564e68e45c",
+      "type": "Ellipse",
+      "name": null,
+      "translation": {
+        "x": -9.940200805664062,
+        "y": 10.537699699401855
+      },
+      "rotation": 0,
+      "rotationInScreen": 0,
+      "transformMatrix": {
+        "0": 1,
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": -9.940200805664062,
+        "5": 10.537699699401855
+      },
+      "boundsLocal": {
+        "x": 0,
+        "y": 0,
+        "width": 610.9582587318862,
+        "height": 633.8563296718925
+      },
+      "centerPointLocal": {
+        "x": 305.4791293659431,
+        "y": 316.92816483594623
+      },
+      "topLeftLocal": {
+        "x": 0,
+        "y": 0
+      },
+      "opacity": 1,
+      "blendMode": 2,
+      "locked": false,
+      "fill": {
+        "type": "Color",
+        "color": {
+          "red": 1,
+          "green": 0.9019607843137255,
+          "blue": 0,
+          "alpha": 1
+        }
+      },
+      "stroke": {
+        "color": {
+          "red": 0.9176470588235294,
+          "green": 0.2196078431372549,
+          "blue": 0.1607843137254902,
+          "alpha": 1
+        },
+        "width": 0,
+        "position": 0,
+        "dashPattern": [],
+        "dashOffset": 0
+      },
+      "cornerRadiusX": 305.4791293659431,
+      "cornerRadiusY": 316.92816483594623,
+      "parentId": "d327e6d9-63a0-4333-9c2d-8a655f3dd169",
+      "hasChildren": false,
+      "depth": 3,
+      "path": "Page[0] > Artboard[0] > Group[2] > Ellipse[0]",
+      "index": 10
+    },
+    {
+      "id": "ae91cc56-d9f6-4031-9d5b-5446546df5bb",
+      "type": "Text",
+      "name": null,
+      "translation": {
+        "x": 268.81475830078125,
+        "y": 299.69586181640625
+      },
+      "rotation": 0,
+      "rotationInScreen": 0,
+      "transformMatrix": {
+        "0": 0.9999999403953552,
+        "1": 0,
+        "2": 0,
+        "3": 0.9999999403953552,
+        "4": 268.81475830078125,
+        "5": 299.69586181640625
+      },
+      "boundsLocal": {
+        "x": -202.44078636169436,
+        "y": -158.29130808512372,
+        "width": 404.8816045125326,
+        "height": 424.523131052653
+      },
+      "centerPointLocal": {
+        "x": 0.000015894571930630264,
+        "y": 53.97025744120279
+      },
+      "topLeftLocal": {
+        "x": -202.44078636169436,
+        "y": -158.29130808512372
+      },
+      "opacity": 1,
+      "blendMode": 2,
+      "locked": false,
+      "textContent": {
+        "text": "   30%\nछूट"
+      },
+      "textAlignment": 3,
+      "parentId": "d327e6d9-63a0-4333-9c2d-8a655f3dd169",
+      "hasChildren": false,
+      "depth": 3,
+      "path": "Page[0] > Artboard[0] > Group[2] > Text[1]",
+      "index": 11
+    },
+    {
+      "id": "766be8a8-d0ea-435c-9d29-5cae41300453",
+      "type": "MediaContainer",
+      "name": null,
+      "translation": {
+        "x": -202.48202514648438,
+        "y": 1557.2314453125
+      },
+      "rotation": 351.9999996139144,
+      "rotationInScreen": 351.9999996139144,
+      "transformMatrix": {
+        "0": 0.9902680516242981,
+        "1": -0.13917310535907745,
+        "2": 0.13917310535907745,
+        "3": 0.9902680516242981,
+        "4": -202.48202514648438,
+        "5": 1557.2314453125
+      },
+      "boundsLocal": {
+        "x": 389.2276916503906,
+        "y": 218.91099548339844,
+        "width": 2000.7254333496094,
+        "height": 1316.6825103759766
+      },
+      "centerPointLocal": {
+        "x": 1389.5904083251953,
+        "y": 877.2522506713867
+      },
+      "topLeftLocal": {
+        "x": 389.2276916503906,
+        "y": 218.91099548339844
+      },
+      "opacity": 1,
+      "blendMode": 2,
+      "locked": false,
+      "parentId": "833e58e2-8b0a-4555-a077-b40620d98f72",
+      "hasChildren": false,
+      "depth": 2,
+      "path": "Page[0] > Artboard[0] > MediaContainer[3]",
+      "index": 12,
+      "_deleted": true,
+      "_replacedBy": "replaced-766be8a8-1768615320802"
+    },
+    {
+      "id": "7cbe9b24-369b-4585-a50b-b3641cf60baa",
+      "type": "Group",
+      "name": null,
+      "translation": {
+        "x": 88,
+        "y": 3177
+      },
+      "rotation": 0,
+      "rotationInScreen": 0,
+      "transformMatrix": {
+        "0": 1,
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 88,
+        "5": 3177
+      },
+      "boundsLocal": {
+        "x": 675.8878784179688,
+        "y": 22.180583953857422,
+        "width": 1075.5858764648438,
+        "height": 91.10602951049805
+      },
+      "centerPointLocal": {
+        "x": 1213.6808166503906,
+        "y": 67.73359870910645
+      },
+      "topLeftLocal": {
+        "x": 675.8878784179688,
+        "y": 22.180583953857422
+      },
+      "opacity": 1,
+      "blendMode": 1,
+      "locked": false,
+      "parentId": "833e58e2-8b0a-4555-a077-b40620d98f72",
+      "hasChildren": true,
+      "childCount": 1,
+      "depth": 2,
+      "path": "Page[0] > Artboard[0] > Group[4]",
+      "index": 13
+    },
+    {
+      "id": "3bbd7b95-e532-4768-aec2-53bca4248ff1",
+      "type": "Text",
+      "name": null,
+      "translation": {
+        "x": 675.8878784179688,
+        "y": 92.51710510253906
+      },
+      "rotation": 0,
+      "rotationInScreen": 0,
+      "transformMatrix": {
+        "0": 0.9999999403953552,
+        "1": 0,
+        "2": 0,
+        "3": 0.9999999403953552,
+        "4": 675.8878784179688,
+        "5": 92.51710510253906
+      },
+      "boundsLocal": {
+        "x": 0,
+        "y": -70.33652464548747,
+        "width": 1075.5859375,
+        "height": 91.10603332519531
+      },
+      "centerPointLocal": {
+        "x": 537.79296875,
+        "y": -24.783507982889816
+      },
+      "topLeftLocal": {
+        "x": 0,
+        "y": -70.33652464548747
+      },
+      "opacity": 1,
+      "blendMode": 2,
+      "locked": false,
+      "textContent": {
+        "text": "redrockkitchen.site.com."
+      },
+      "textAlignment": 1,
+      "parentId": "7cbe9b24-369b-4585-a50b-b3641cf60baa",
+      "hasChildren": false,
+      "depth": 3,
+      "path": "Page[0] > Artboard[0] > Group[4] > Text[0]",
+      "index": 14
+    },
+    {
+      "id": "88f1ea80-7d9b-4206-8a20-7617f9858cc3",
+      "type": "Group",
+      "name": null,
+      "translation": {
+        "x": -214,
+        "y": 438
+      },
+      "rotation": 0,
+      "rotationInScreen": 0,
+      "transformMatrix": {
+        "0": 1,
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": -214,
+        "5": 438
+      },
+      "boundsLocal": {
+        "x": 682.1791381835938,
+        "y": 166.3695831298828,
+        "width": 1667.1482543945312,
+        "height": 720.2845916748047
+      },
+      "centerPointLocal": {
+        "x": 1515.7532653808594,
+        "y": 526.5118789672852
+      },
+      "topLeftLocal": {
+        "x": 682.1791381835938,
+        "y": 166.3695831298828
+      },
+      "opacity": 1,
+      "blendMode": 1,
+      "locked": false,
+      "parentId": "833e58e2-8b0a-4555-a077-b40620d98f72",
+      "hasChildren": true,
+      "childCount": 2,
+      "depth": 2,
+      "path": "Page[0] > Artboard[0] > Group[5]",
+      "index": 15
+    },
+    {
+      "id": "d5e0d0da-2c1c-4a31-92a4-4bab88114187",
+      "type": "Text",
+      "name": null,
+      "translation": {
+        "x": 1522.7196044921875,
+        "y": 581.4824829101562
+      },
+      "rotation": 0,
+      "rotationInScreen": 0,
+      "transformMatrix": {
+        "0": 0.9999999403953552,
+        "1": 0,
+        "2": 0,
+        "3": 0.9999999403953552,
+        "4": 1522.7196044921875,
+        "5": 581.4824829101562
+      },
+      "boundsLocal": {
+        "x": -816.470209757487,
+        "y": -415.11290868123376,
+        "width": 1632.940419514974,
+        "height": 578.151273727417
+      },
+      "centerPointLocal": {
+        "x": 0,
+        "y": -126.03727181752527
+      },
+      "topLeftLocal": {
+        "x": -816.470209757487,
+        "y": -415.11290868123376
+      },
+      "opacity": 1,
+      "blendMode": 2,
+      "locked": false,
+      "textContent": {
+        "text": "शाही दावत"
+      },
+      "textAlignment": 3,
+      "parentId": "88f1ea80-7d9b-4206-8a20-7617f9858cc3",
+      "hasChildren": false,
+      "depth": 3,
+      "path": "Page[0] > Artboard[0] > Group[5] > Text[0]",
+      "index": 16
+    },
+    {
+      "id": "13346bf3-f6ca-40dc-8106-110946342750",
+      "type": "Text",
+      "name": null,
+      "translation": {
+        "x": 1515.7532958984375,
+        "y": 797.2232666015625
+      },
+      "rotation": 0,
+      "rotationInScreen": 0,
+      "transformMatrix": {
+        "0": 0.9999999403953552,
+        "1": 0,
+        "2": 0,
+        "3": 0.9999999403953552,
+        "4": 1515.7532958984375,
+        "5": 797.2232666015625
+      },
+      "boundsLocal": {
+        "x": -833.5741678873699,
+        "y": -227.70053545633954,
+        "width": 1667.1483357747397,
+        "height": 317.13143984476727
+      },
+      "centerPointLocal": {
+        "x": 0,
+        "y": -69.1348155339559
+      },
+      "topLeftLocal": {
+        "x": -833.5741678873699,
+        "y": -227.70053545633954
+      },
+      "opacity": 1,
+      "blendMode": 2,
+      "locked": false,
+      "textContent": {
+        "text": "विशेष ऑफ़र"
+      },
+      "textAlignment": 3,
+      "parentId": "88f1ea80-7d9b-4206-8a20-7617f9858cc3",
+      "hasChildren": false,
+      "depth": 3,
+      "path": "Page[0] > Artboard[0] > Group[5] > Text[1]",
+      "index": 17
+    },
+    {
+      "id": "ea97b124-5acf-49d9-b8f2-1156c95b05f7",
+      "type": "Group",
+      "name": null,
+      "translation": {
+        "x": 30.563098907470703,
+        "y": 376.7357482910156
+      },
+      "rotation": 0,
+      "rotationInScreen": 0,
+      "transformMatrix": {
+        "0": 1,
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 30.563098907470703,
+        "5": 376.7357482910156
+      },
+      "boundsLocal": {
+        "x": 0.000011444091796875,
+        "y": 889.0982055664062,
+        "width": 2287.409656524658,
+        "height": 1600.7277221679688
+      },
+      "centerPointLocal": {
+        "x": 1143.704839706421,
+        "y": 1689.4620666503906
+      },
+      "topLeftLocal": {
+        "x": 0.000011444091796875,
+        "y": 889.0982055664062
+      },
+      "opacity": 1,
+      "blendMode": 1,
+      "locked": false,
+      "parentId": "833e58e2-8b0a-4555-a077-b40620d98f72",
+      "hasChildren": true,
+      "childCount": 2,
+      "depth": 2,
+      "path": "Page[0] > Artboard[0] > Group[6]",
+      "index": 18
+    },
+    {
+      "id": "9be02302-4ad5-47f7-996f-343ec9e21261",
+      "type": "MediaContainer",
+      "name": null,
+      "translation": {
+        "x": 362.2606201171875,
+        "y": 1812.656982421875
+      },
+      "rotation": 49.000000894386346,
+      "rotationInScreen": 49.000000894386346,
+      "transformMatrix": {
+        "0": 0.6560590267181396,
+        "1": 0.7547096014022827,
+        "2": -0.7547096014022827,
+        "3": 0.6560590267181396,
+        "4": 362.2606201171875,
+        "5": 1812.656982421875
+      },
+      "boundsLocal": {
+        "x": 0,
+        "y": 0,
+        "width": 480,
+        "height": 480
+      },
+      "centerPointLocal": {
+        "x": 240,
+        "y": 240
+      },
+      "topLeftLocal": {
+        "x": 0,
+        "y": 0
+      },
+      "opacity": 1,
+      "blendMode": 2,
+      "locked": false,
+      "parentId": "ea97b124-5acf-49d9-b8f2-1156c95b05f7",
+      "hasChildren": false,
+      "depth": 3,
+      "path": "Page[0] > Artboard[0] > Group[6] > MediaContainer[0]",
+      "index": 19
+    },
+    {
+      "id": "ab5be451-1fab-4f9b-b5bb-4f6b8491dc11",
+      "type": "MediaContainer",
+      "name": null,
+      "translation": {
+        "x": 2287.40962600708,
+        "y": 1168.408447265625
+      },
+      "rotation": 174.00000005983247,
+      "rotationInScreen": 174.00000005983247,
+      "transformMatrix": {
+        "0": -0.9945219159126282,
+        "1": 0.10452846437692642,
+        "2": -0.10452846437692642,
+        "3": -0.9945219159126282,
+        "4": 2287.40966796875,
+        "5": 1168.408447265625
+      },
+      "boundsLocal": {
+        "x": 0,
+        "y": 0,
+        "width": 280.8487243652344,
+        "height": 280.8487243652344
+      },
+      "centerPointLocal": {
+        "x": 140.4243621826172,
+        "y": 140.4243621826172
+      },
+      "topLeftLocal": {
+        "x": 0,
+        "y": 0
+      },
+      "opacity": 1,
+      "blendMode": 2,
+      "locked": false,
+      "parentId": "ea97b124-5acf-49d9-b8f2-1156c95b05f7",
+      "hasChildren": false,
+      "depth": 3,
+      "path": "Page[0] > Artboard[0] > Group[6] > MediaContainer[1]",
+      "index": 20
+    }
+  ]
+}
